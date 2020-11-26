@@ -13,6 +13,7 @@
 		45445D9A256E326300FCD807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45445D98256E326300FCD807 /* Main.storyboard */; };
 		45445D9C256E326E00FCD807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45445D9B256E326E00FCD807 /* Assets.xcassets */; };
 		45445D9F256E326E00FCD807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45445D9D256E326E00FCD807 /* LaunchScreen.storyboard */; };
+		45445DC9256E6DB900FCD807 /* UIPreferenceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		45445D9B256E326E00FCD807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45445D9E256E326E00FCD807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45445DA0256E326E00FCD807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreferenceButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				45445D92256E326300FCD807 /* AppDelegate.swift */,
 				45445D94256E326300FCD807 /* SceneDelegate.swift */,
 				45445D96256E326300FCD807 /* ViewController.swift */,
+				45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */,
 				45445D98256E326300FCD807 /* Main.storyboard */,
 				45445D9B256E326E00FCD807 /* Assets.xcassets */,
 				45445D9D256E326E00FCD807 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45445DC9256E6DB900FCD807 /* UIPreferenceButton.swift in Sources */,
 				45445D97256E326300FCD807 /* ViewController.swift in Sources */,
 				45445D93256E326300FCD807 /* AppDelegate.swift in Sources */,
 				45445D95256E326300FCD807 /* SceneDelegate.swift in Sources */,

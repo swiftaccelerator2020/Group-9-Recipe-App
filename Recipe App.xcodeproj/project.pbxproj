@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		45445D93256E326300FCD807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445D92256E326300FCD807 /* AppDelegate.swift */; };
 		45445D95256E326300FCD807 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445D94256E326300FCD807 /* SceneDelegate.swift */; };
-		45445D97256E326300FCD807 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445D96256E326300FCD807 /* ViewController.swift */; };
+		45445D97256E326300FCD807 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445D96256E326300FCD807 /* RecipeViewController.swift */; };
 		45445D9A256E326300FCD807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45445D98256E326300FCD807 /* Main.storyboard */; };
 		45445D9C256E326E00FCD807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45445D9B256E326E00FCD807 /* Assets.xcassets */; };
 		45445D9F256E326E00FCD807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45445D9D256E326E00FCD807 /* LaunchScreen.storyboard */; };
 		45445DC9256E6DB900FCD807 /* UIPreferenceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */; };
 		455F7801256F914B00137897 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F7800256F914A00137897 /* Colours.swift */; };
+		4575AC52256FA799006CF008 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		45445D8F256E326300FCD807 /* Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45445D92256E326300FCD807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45445D94256E326300FCD807 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45445D96256E326300FCD807 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45445D96256E326300FCD807 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		45445D99256E326300FCD807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45445D9B256E326E00FCD807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45445D9E256E326E00FCD807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45445DA0256E326E00FCD807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreferenceButton.swift; sourceTree = "<group>"; };
 		455F7800256F914A00137897 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,8 @@
 			children = (
 				45445D92256E326300FCD807 /* AppDelegate.swift */,
 				45445D94256E326300FCD807 /* SceneDelegate.swift */,
-				45445D96256E326300FCD807 /* ViewController.swift */,
+				45445D96256E326300FCD807 /* RecipeViewController.swift */,
+				4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */,
 				45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */,
 				455F7800256F914A00137897 /* Colours.swift */,
 				45445D98256E326300FCD807 /* Main.storyboard */,
@@ -143,9 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4575AC52256FA799006CF008 /* RecipeCollectionViewCell.swift in Sources */,
 				45445DC9256E6DB900FCD807 /* UIPreferenceButton.swift in Sources */,
 				455F7801256F914B00137897 /* Colours.swift in Sources */,
-				45445D97256E326300FCD807 /* ViewController.swift in Sources */,
+				45445D97256E326300FCD807 /* RecipeViewController.swift in Sources */,
 				45445D93256E326300FCD807 /* AppDelegate.swift in Sources */,
 				45445D95256E326300FCD807 /* SceneDelegate.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ let defaults = UserDefaults.standard
 
 class UIPreferenceButton: UIButton {
     var pressed = false
-    var diets = [
+    let diets = [
         "Gluten Free",
         "Ketogenic",
         "Vegetarian",

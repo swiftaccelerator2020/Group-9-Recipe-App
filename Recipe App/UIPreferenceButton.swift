@@ -44,7 +44,7 @@ class UIPreferenceButton: UIButton {
         
         self.layer.cornerRadius = 10
         self.backgroundColor = UIColor.white
-        self.setTitleColor(UIColor.blue, for: .normal)
+        self.setTitleColor(blue, for: .normal)
         self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
         self.layer.shadowOpacity = 1
@@ -62,7 +62,7 @@ class UIPreferenceButton: UIButton {
         if let preference = defaults.object(forKey: self.listKey) as? [String] {
             if preference.contains(self.name!) {
                 self.pressed = true
-                self.backgroundColor = UIColor.systemOrange
+                self.backgroundColor = orange
                 self.setTitleColor(UIColor.white, for: .normal)
             }
         } else {
@@ -77,7 +77,7 @@ class UIPreferenceButton: UIButton {
         self.pressed = !self.pressed
         
         if self.pressed {
-            self.backgroundColor = UIColor.systemOrange
+            self.backgroundColor = orange
             self.setTitleColor(UIColor.white, for: .normal)
             
             if var preference = defaults.object(forKey: self.listKey) as? [String] {
@@ -91,7 +91,7 @@ class UIPreferenceButton: UIButton {
             
         } else {
             self.backgroundColor = UIColor.white
-            self.setTitleColor(UIColor.blue, for: .normal)
+            self.setTitleColor(blue, for: .normal)
             
             if var preference = defaults.object(forKey: self.listKey) as? [String] {
                 if (preference.contains(self.name!)) {

@@ -43,6 +43,23 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
         getRecipes {
             self.recipeCollectionView.reloadData()
         }
+        
+        let defaults = UserDefaults.standard
+        
+        if let isNewUser = defaults.object(forKey: "isNewUser") as? Bool {
+            if isNewUser {
+                perform(#selector(presentGetStartedViewController), with: nil, afterDelay: 0)
+            }
+        } else {
+            defaults.set(true, forKey: "isNewUser")
+            perform(#selector(presentGetStartedViewController), with: nil, afterDelay: 0)
+        }
+    }
+    
+    @objc private func presentGetStartedViewController() {
+        let vc = storyboard?.instantiateViewController(identifier: "getStarted") as! GetStartedViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,7 +105,19 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func getRecipes(completed: @escaping () -> ()) {
         
-        let urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=038e058ad133420196ef21f8c2dbe3d5&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+        var urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=038e058ad133420196ef21f8c2dbe3d5&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+        
+        let diets = defaults.object(forKey: "diets") as? [String]
+        let intolerences = defaults.object(forKey: "intolerences") as? [String]
+        if diets!.count != 0 {
+            let filter = diets?.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
+            urlString += "&diet=\(filter!)"
+        }
+        if intolerences!.count != 0 {
+            let filter = intolerences?.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
+            urlString += "&intolerances=\(filter!)"
+        }
+        
         let url = URL(string: urlString)
         
         guard url != nil else { return }

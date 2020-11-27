@@ -585,7 +585,7 @@
                                                 <rect key="frame" x="196.5" y="0.0" width="117.5" height="36"/>
                                                 <color key="backgroundColor" red="0.96078431372549022" green="0.54117647058823526" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="0ka-pc-YBu"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="0ka-pc-YBu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Edit">
@@ -650,7 +650,7 @@
                                                 <rect key="frame" x="195.5" y="0.0" width="118.5" height="36"/>
                                                 <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="9Ri-Sr-3Wd"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="9Ri-Sr-3Wd"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Edit">

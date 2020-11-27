@@ -62,8 +62,14 @@ extension PreferencesViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == dietsTableView {
+            if diets!.count == 0 {
+                return 1
+            }
             return diets!.count
         } else if tableView == intolerencesTableView {
+            if intolerences!.count == 0 {
+                return 1
+            }
             return intolerences!.count
         } else {
             return 0
@@ -73,13 +79,21 @@ extension PreferencesViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == dietsTableView {
             let cell = dietsTableView.dequeueReusableCell(withIdentifier: "dietCell", for: indexPath)
-            cell.textLabel?.text = diets![indexPath.row]
+            if diets!.count == 0 {
+                cell.textLabel?.text = "None"
+            } else {
+                cell.textLabel?.text = diets![indexPath.row]
+            }
             cell.textLabel?.textColor = blue
             cell.textLabel?.font = UIFont(name: "System", size: 20)
             return cell
         } else if tableView == intolerencesTableView {
             let cell = intolerencesTableView.dequeueReusableCell(withIdentifier: "intolerenceCell", for: indexPath)
-            cell.textLabel?.text = intolerences![indexPath.row]
+            if intolerences!.count == 0 {
+                cell.textLabel?.text = "None"
+            } else {
+                cell.textLabel?.text = intolerences![indexPath.row]
+            }
             cell.textLabel?.textColor = blue
             cell.textLabel?.font = UIFont(name: "System", size: 20)
             return cell

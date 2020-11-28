@@ -10,7 +10,9 @@ import UIKit
 class PreferencesViewController: UIViewController {
 
     @IBOutlet weak var dietsTableView: UITableView!
+    @IBOutlet weak var dietsView: UIView!
     
+    @IBOutlet weak var intolerencesView: UIView!
     @IBOutlet weak var intolerencesTableView: UITableView!
     
     var diets = defaults.object(forKey: "diets") as? [String]
@@ -27,11 +29,17 @@ class PreferencesViewController: UIViewController {
         intolerencesTableView.dataSource = self
         
 
-        dietsTableView.layer.shadowColor = UIColor.gray.cgColor
-        dietsTableView.layer.shadowOpacity = 1
-        dietsTableView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        dietsTableView.clipsToBounds = false
-        dietsTableView.layer.cornerRadius = 10
+        dietsView.layer.shadowColor = UIColor.gray.cgColor
+        dietsView.layer.shadowOpacity = 1
+        dietsView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        dietsView.clipsToBounds = false
+        dietsView.layer.cornerRadius = 10
+        
+        intolerencesView.layer.shadowColor = UIColor.gray.cgColor
+        intolerencesView.layer.shadowOpacity = 1
+        intolerencesView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        intolerencesView.clipsToBounds = false
+        intolerencesView.layer.cornerRadius = 10
     }
     
     @IBAction func backToPreferencesViewController(with segue: UIStoryboardSegue) {

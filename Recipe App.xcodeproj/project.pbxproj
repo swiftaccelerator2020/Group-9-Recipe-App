@@ -76,10 +76,10 @@
 				45AB097425720DB500C926A1 /* RecipeSearchViewController.swift */,
 				4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */,
 				45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */,
-				455F7800256F914A00137897 /* Colours.swift */,
 				45445D98256E326300FCD807 /* Main.storyboard */,
 				45AB097825721FD000C926A1 /* RecipeDetailsViewController.swift */,
 				482124782570BF8C00EE5F9D /* PreferencesViewController.swift */,
+				455F7800256F914A00137897 /* Colours.swift */,
 				4821247B2570C21E00EE5F9D /* GetStartedViewController.swift */,
 				45445D9B256E326E00FCD807 /* Assets.xcassets */,
 				45445D9D256E326E00FCD807 /* LaunchScreen.storyboard */,
@@ -315,6 +315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6P63P8K62;
 				INFOPLIST_FILE = "Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -333,6 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6P63P8K62;
 				INFOPLIST_FILE = "Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

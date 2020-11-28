@@ -7,6 +7,65 @@
 
 import UIKit
 
+extension UICollectionView {
+    func setEmptyMessage(_ message: String) {
+        let msgLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        msgLabel.text = message
+        msgLabel.textAlignment = .center
+        msgLabel.font = UIFont(name: "System", size: 20)
+        msgLabel.sizeToFit()
+        
+        self.backgroundView = msgLabel
+    }
+    
+    func restore() {
+        self.backgroundView = nil
+    }
+}
+
+let apiKeys = [
+    "d7541b406f7e43d5a82c7755e35bf508",
+    "0404847ae765463abf4f329add9c3f04",
+    "db676e137b8a425c8a670e3b268d2f81",
+    "fb4f7b804e6b4aff854fad632c57169b",
+    "0a87a598474744d9998db8d7583442a0"
+]
+
+func getURL(query: String?) -> String {
+    
+    let defaults = UserDefaults.standard
+    var apiKey: String?
+    if let index = defaults.object(forKey: "apiKeyIndex") as? Int {
+        apiKey = apiKeys[index]
+    } else {
+        defaults.set(0, forKey: "apiKeyIndex")
+        apiKey = apiKeys[0]
+    }
+    var urlString: String?
+    if query != nil {
+        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&query=\(query!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+    } else {
+        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+    }
+    
+    
+    if let diets = defaults.object(forKey: "diets") as? [String] {
+        if diets.count != 0 {
+            let filter = diets.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
+            urlString! += "&diet=\(filter)"
+        }
+    }
+    if let intolerences = defaults.object(forKey: "intolerences") as? [String] {
+        if intolerences.count != 0 {
+            let filter = intolerences.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
+            urlString! += "&intolerances=\(filter)"
+        }
+    }
+    
+    return urlString!
+    
+}
+
 private let reuseIdentifier = "recipeCell"
 
 class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
@@ -16,7 +75,6 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
     
     @IBOutlet weak var recipeSearchBar: UISearchBar!
     @IBOutlet weak var recipeCollectionView: UICollectionView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +82,10 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
         searchRecipes(query: searchBarText.replacingOccurrences(of: " ", with: "%20")) {
             self.recipeCollectionView.reloadData()
         }
+
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
     }
     
     
@@ -34,7 +96,17 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return recipes?.count ?? 0
+        if let recipes = recipes {
+            if recipes.count == 0 {
+                self.recipeCollectionView.setEmptyMessage("No results found")
+            } else {
+                self.recipeCollectionView.restore()
+            }
+            return recipes.count
+        } else {
+            self.recipeCollectionView.setEmptyMessage("Loading...")
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -56,6 +128,7 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if (!(recipeSearchBar.text?.isEmpty)!) {
+            recipeSearchBar.resignFirstResponder()
             searchRecipes(query: recipeSearchBar.text!.replacingOccurrences(of: " ", with: "%20")) {
                 self.recipeCollectionView.reloadData()
             }
@@ -65,20 +138,9 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
     
     func searchRecipes(query: String, completed: @escaping () -> ()) {
         
-        var urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=d7541b406f7e43d5a82c7755e35bf508&query=\(query)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
         
-        let diets = defaults.object(forKey: "diets") as? [String]
-        let intolerences = defaults.object(forKey: "intolerences") as? [String]
-        if diets!.count != 0 {
-            let filter = diets?.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
-            urlString += "&diet=\(filter!)"
-        }
-        if intolerences!.count != 0 {
-            let filter = intolerences?.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
-            urlString += "&intolerances=\(filter!)"
-        }
         
-        let url = URL(string: urlString)
+        let url = URL(string: getURL(query: query))
         
         guard url != nil else { return }
         
@@ -89,6 +151,35 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
                 do {
                     let jsonDecoder = JSONDecoder()
                     let data = try jsonDecoder.decode(Recipe.self, from: data!)
+                    guard data.results != nil else {
+                        let defaults = UserDefaults.standard
+                        if let tries = (defaults.object(forKey: "connectionTries") as? Int) {
+                            let newTries = tries + 1
+                            if newTries == apiKeys.count {
+                                let alert = UIAlertController(title: "AppError", message: "The app has run out of Recipe API requests. Wait until tomorrow, sorry for the inconvenience.", preferredStyle: .alert)
+                                let action = UIAlertAction(title: "Close App", style: .default, handler: { _ in
+                                    UIControl().sendAction(#selector(NSXPCConnection.suspend), to: UIApplication.shared, for: nil)
+                                })
+                                alert.addAction(action)
+                                return
+                            } else {
+                                defaults.set(newTries, forKey: "connectionTries")
+                            }
+                        } else {
+                            defaults.set(1, forKey: "connectionTries")
+                        }
+                        if let index = defaults.object(forKey: "apiKeyIndex") as? Int {
+                            let newIndex = index + 1
+                            if newIndex > (apiKeys.count-1) {
+                                defaults.set(0, forKey: "apiKeyIndex")
+                            } else {
+                                defaults.set(newIndex, forKey: "apiKeyIndex")
+                            }
+                            self.searchRecipes(query: query, completed: completed)
+                            return
+                        }
+                        return
+                    }
                     self.recipes = data.results
                     
                     DispatchQueue.main.async {

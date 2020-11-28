@@ -27,7 +27,11 @@ class PreferencesViewController: UIViewController {
         intolerencesTableView.dataSource = self
         
 
-        // Do any additional setup after loading the view.
+        dietsTableView.layer.shadowColor = UIColor.gray.cgColor
+        dietsTableView.layer.shadowOpacity = 1
+        dietsTableView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        dietsTableView.clipsToBounds = false
+        dietsTableView.layer.cornerRadius = 10
     }
     
     @IBAction func backToPreferencesViewController(with segue: UIStoryboardSegue) {

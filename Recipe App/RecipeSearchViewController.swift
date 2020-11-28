@@ -1,70 +1,29 @@
 //
-//  RecipeViewController.swift
+//  RecipeSearchViewController.swift
 //  Recipe App
 //
-//  Created by Lim Meng Shin on 25/11/20.
+//  Created by Lim Meng Shin on 28/11/20.
 //
 
 import UIKit
 
 private let reuseIdentifier = "recipeCell"
 
-struct Recipe: Decodable {
-    let results: [RecipesInfo]?
-}
-
-struct RecipesInfo: Decodable {
-    let title: String?
-    let image: String?
-    let id: Int?
-    let readyInMinutes: Int?
-    let aggregateLikes: Int?
-    let summary: String?
-    let analyzedInstructions: [RecipeInstructions]?
-}
-
-struct RecipeInstructions: Decodable {
-    let steps: [RecipeSteps]?
-}
-
-struct RecipeSteps: Decodable {
-    let step: String?
-}
-
-class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     
     var recipes: [RecipesInfo]?
+    var searchBarText: String = ""
     
     @IBOutlet weak var recipeSearchBar: UISearchBar!
     @IBOutlet weak var recipeCollectionView: UICollectionView!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let defaults = UserDefaults.standard
-        
-        if let isNewUser = defaults.object(forKey: "isNewUser") as? Bool {
-            if isNewUser {
-                perform(#selector(presentGetStartedViewController), with: nil, afterDelay: 0)
-            }
-        } else {
-            defaults.set(true, forKey: "isNewUser")
-            perform(#selector(presentGetStartedViewController), with: nil, afterDelay: 0)
-        }
-        
-        getRecipes {
+        recipeSearchBar.text = searchBarText
+        searchRecipes(query: searchBarText.replacingOccurrences(of: " ", with: "%20")) {
             self.recipeCollectionView.reloadData()
         }
-    }
-    
-    @objc private func presentGetStartedViewController() {
-        let vc = storyboard?.instantiateViewController(identifier: "getStarted") as! GetStartedViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        recipeSearchBar.text = nil
     }
     
     
@@ -97,17 +56,16 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if (!(recipeSearchBar.text?.isEmpty)!) {
-            guard let searchBarText = recipeSearchBar.text else { return }
-            let vc = storyboard?.instantiateViewController(identifier: "RecipeSearchViewController") as? RecipeSearchViewController
-            vc?.searchBarText = searchBarText
-            self.navigationController?.pushViewController(vc!, animated: false)
+            searchRecipes(query: recipeSearchBar.text!.replacingOccurrences(of: " ", with: "%20")) {
+                self.recipeCollectionView.reloadData()
+            }
         }
     }
     
     
-    func getRecipes(completed: @escaping () -> ()) {
+    func searchRecipes(query: String, completed: @escaping () -> ()) {
         
-        var urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=d7541b406f7e43d5a82c7755e35bf508&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+        var urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=d7541b406f7e43d5a82c7755e35bf508&query=\(query)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
         
         let diets = defaults.object(forKey: "diets") as? [String]
         let intolerences = defaults.object(forKey: "intolerences") as? [String]
@@ -143,25 +101,5 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
         }
         dataTask.resume()
-    }
-}
-
-extension UIImageView {
-    func downloaded(from url: URL) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-            else { return }
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-            }
-        }.resume()
-    }
-    func downloaded(from link: String) {
-        guard let url = URL(string: link) else { return }
-        downloaded(from: url)
     }
 }

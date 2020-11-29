@@ -10,12 +10,29 @@ import UIKit
 class RecipeDetailsViewController: UIViewController {
     
     var recipes: RecipesInfo?
-    
     @IBOutlet weak var recipeImageView: UIImageView!
+    
+    @IBOutlet weak var recipeUIView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipeImageView.downloaded(from: recipes?.image ?? "https://i.stack.imgur.com/Vkq2a.png")
+        
+        for view in [recipeImageView, recipeUIView] {
+            view!.layer.shadowColor = UIColor.gray.cgColor
+            view!.layer.shadowOpacity = 1
+            view!.layer.shadowOffset = CGSize(width: 1, height: 1)
+            view!.layer.cornerRadius = 15
+            view!.clipsToBounds = false
+        }
+        
+        
+        self.recipeImageView.downloaded(from: recipes?.image ?? "https://i.stack.imgur.com/Vkq2a.png")
+        if let recipes = recipes {
+            if let title = recipes.title {
+                self.title = title
+            }
+            
+        }
     }
     
 

@@ -19,25 +19,27 @@ struct RecipesInfo: Decodable {
     let sourceName: String?
     let sourceUrl: String?
     let summary: String?
-    let nutrition: [RecipeNutrition]?
+    let cuisines: [String]?
+    let dishTypes: [String]?
+    let diets: [String]?
+    let nutrition: RecipeNutrition?
     let analyzedInstructions: [RecipeInstructions]?
     
-//    var equipments: [RecipeStepEquipment] {
-//      var equipmentsArray: [RecipeStepEquipment] = []
-//      if let analyzedInstructions = analyzedInstructions {
-//        for analyzedInstruction in analyzedInstructions {
-//          if let steps = analyzedInstruction.steps {
-//            for step in steps {
-//              if let equipment = step.equipment {
-//                equipmentsArray += equipment
-//              }
-//            }
-//          }
-//        }
-//      }
-//      return equipmentsArray.unique()
-//    }
-
+    var equipments: [RecipeStepEquipment] {
+        var equipmentsArray: [RecipeStepEquipment] = []
+        if let analyzedInstructions = analyzedInstructions {
+            for analyzedInstruction in analyzedInstructions {
+                if let steps = analyzedInstruction.steps {
+                    for step in steps {
+                        if let equipment = step.equipment {
+                            equipmentsArray += equipment
+                        }
+                    }
+                }
+            }
+        }
+        return equipmentsArray.unique()
+    }
 }
 
 // Nutrition and Ingredients
@@ -68,7 +70,7 @@ struct RecipeSteps: Decodable {
     let step: String?
     let ingredients: [RecipeStepIngredients]?
     let equipment: [RecipeStepEquipment]?
-    let length: [RecipeStepLength]?
+    let length: RecipeStepLength?
 }
 
 struct RecipeStepIngredients: Decodable {

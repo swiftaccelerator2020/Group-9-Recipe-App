@@ -7,65 +7,6 @@
 
 import UIKit
 
-extension UICollectionView {
-    func setEmptyMessage(_ message: String) {
-        let msgLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        msgLabel.text = message
-        msgLabel.textAlignment = .center
-        msgLabel.font = UIFont(name: "System", size: 20)
-        msgLabel.sizeToFit()
-        
-        self.backgroundView = msgLabel
-    }
-    
-    func restore() {
-        self.backgroundView = nil
-    }
-}
-
-let apiKeys = [
-    "d7541b406f7e43d5a82c7755e35bf508",
-    "0404847ae765463abf4f329add9c3f04",
-    "db676e137b8a425c8a670e3b268d2f81",
-    "fb4f7b804e6b4aff854fad632c57169b",
-    "0a87a598474744d9998db8d7583442a0"
-]
-
-func getURL(query: String?) -> String {
-    
-    let defaults = UserDefaults.standard
-    var apiKey: String?
-    if let index = defaults.object(forKey: "apiKeyIndex") as? Int {
-        apiKey = apiKeys[index]
-    } else {
-        defaults.set(0, forKey: "apiKeyIndex")
-        apiKey = apiKeys[0]
-    }
-    var urlString: String?
-    if query != nil {
-        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&query=\(query!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
-    } else {
-        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
-    }
-    
-    
-    if let diets = defaults.object(forKey: "diets") as? [String] {
-        if diets.count != 0 {
-            let filter = diets.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
-            urlString! += "&diet=\(filter)"
-        }
-    }
-    if let intolerences = defaults.object(forKey: "intolerences") as? [String] {
-        if intolerences.count != 0 {
-            let filter = intolerences.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
-            urlString! += "&intolerances=\(filter)"
-        }
-    }
-    
-    return urlString!
-    
-}
-
 private let reuseIdentifier = "recipeCell"
 
 class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
@@ -75,17 +16,64 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
     
     @IBOutlet weak var recipeSearchBar: UISearchBar!
     @IBOutlet weak var recipeCollectionView: UICollectionView!
+    
+    var previousDiets: [String] = []
+    var previousIntolerences: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipeSearchBar.text = searchBarText
-        searchRecipes(query: searchBarText.replacingOccurrences(of: " ", with: "%20")) {
-            self.recipeCollectionView.reloadData()
-        }
 
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
+        
+        savePreviousPreferences()
+        
+        recipeSearchBar.text = searchBarText
+        searchRecipes(query: searchBarText) {
+            self.recipeCollectionView.reloadData()
+        }
+    }
+    
+    func savePreviousPreferences() {
+        if let diets = defaults.object(forKey: "diets") as? [String] {
+            previousDiets = diets
+        } else {
+            previousDiets = []
+            defaults.set([], forKey: "diets")
+        }
+        if let intolerences = defaults.object(forKey: "intolerences") as? [String] {
+            previousIntolerences = intolerences
+        } else {
+            previousIntolerences = []
+            defaults.set([], forKey: "intolerences")
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if let diets = defaults.object(forKey: "diets") as? [String] {
+            if previousDiets != diets {
+                savePreviousPreferences()
+                recipes = nil
+                recipeCollectionView.reloadData()
+                searchRecipes(query: recipeSearchBar.text!) {
+                    self.recipeCollectionView.reloadData()
+                }
+            }
+        }
+        
+        if let intolerences = defaults.object(forKey: "intolerences") as? [String] {
+            if previousIntolerences != intolerences {
+                savePreviousPreferences()
+                recipes = nil
+                recipeCollectionView.reloadData()
+                searchRecipes(query: recipeSearchBar.text!) {
+                    self.recipeCollectionView.reloadData()
+                }
+            }
+        }
+
     }
     
     
@@ -129,7 +117,9 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if (!(recipeSearchBar.text?.isEmpty)!) {
             recipeSearchBar.resignFirstResponder()
-            searchRecipes(query: recipeSearchBar.text!.replacingOccurrences(of: " ", with: "%20")) {
+            recipes = nil
+            recipeCollectionView.reloadData()
+            searchRecipes(query: recipeSearchBar.text!) {
                 self.recipeCollectionView.reloadData()
             }
         }
@@ -137,9 +127,7 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
     
     
     func searchRecipes(query: String, completed: @escaping () -> ()) {
-        
-        
-        
+
         let url = URL(string: getURL(query: query))
         
         guard url != nil else { return }
@@ -181,6 +169,9 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
                         return
                     }
                     self.recipes = data.results
+                    
+                    let defaults = UserDefaults.standard
+                    defaults.set(0, forKey: "connectionTries")
                     
                     DispatchQueue.main.async {
                         completed()

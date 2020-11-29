@@ -9,28 +9,6 @@ import UIKit
 
 private let reuseIdentifier = "recipeCell"
 
-struct Recipe: Decodable {
-    let results: [RecipesInfo]?
-}
-
-struct RecipesInfo: Decodable {
-    let title: String?
-    let image: String?
-    let id: Int?
-    let readyInMinutes: Int?
-    let aggregateLikes: Int?
-    let summary: String?
-    let analyzedInstructions: [RecipeInstructions]?
-}
-
-struct RecipeInstructions: Decodable {
-    let steps: [RecipeSteps]?
-}
-
-struct RecipeSteps: Decodable {
-    let step: String?
-}
-
 class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     
     var recipes: [RecipesInfo]?
@@ -94,6 +72,8 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
         if let diets = defaults.object(forKey: "diets") as? [String] {
             if previousDiets != diets {
                 savePreviousPreferences()
+                recipes = nil
+                recipeCollectionView.reloadData()
                 getRecipes {
                     self.recipeCollectionView.reloadData()
                 }
@@ -103,6 +83,8 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
         if let intolerences = defaults.object(forKey: "intolerences") as? [String] {
             if previousIntolerences != intolerences {
                 savePreviousPreferences()
+                recipes = nil
+                recipeCollectionView.reloadData()
                 getRecipes {
                     self.recipeCollectionView.reloadData()
                 }
@@ -162,21 +144,6 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func getRecipes(completed: @escaping () -> ()) {
         
-        var urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=d7541b406f7e43d5a82c7755e35bf508&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
-        
-        if let diets = defaults.object(forKey: "diets") as? [String] {
-            if diets.count != 0 {
-                let filter = diets.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
-                urlString += "&diet=\(filter)"
-            }
-        }
-        if let intolerences = defaults.object(forKey: "intolerences") as? [String] {
-            if intolerences.count != 0 {
-                let filter = intolerences.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
-                urlString += "&intolerances=\(filter)"
-            }
-        }
-        
         let url = URL(string: getURL(query: nil))
         
         guard url != nil else { return }
@@ -220,6 +187,9 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
 
                     self.recipes = data.results
                     
+                    let defaults = UserDefaults.standard
+                    defaults.set(0, forKey: "connectionTries")
+                    
                     DispatchQueue.main.async {
                         completed()
                     }
@@ -231,6 +201,41 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         dataTask.resume()
     }
+}
+
+func getURL(query: String?) -> String {
+    
+    let defaults = UserDefaults.standard
+    var apiKey: String?
+    if let index = defaults.object(forKey: "apiKeyIndex") as? Int {
+        apiKey = apiKeys[index]
+    } else {
+        defaults.set(0, forKey: "apiKeyIndex")
+        apiKey = apiKeys[0]
+    }
+    var urlString: String?
+    if query != nil {
+        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&query=\(query!.replacingOccurrences(of: " ", with: "%20"))&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+    } else {
+        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+    }
+    
+    
+    if let diets = defaults.object(forKey: "diets") as? [String] {
+        if diets.count != 0 {
+            let filter = diets.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
+            urlString! += "&diet=\(filter)"
+        }
+    }
+    if let intolerences = defaults.object(forKey: "intolerences") as? [String] {
+        if intolerences.count != 0 {
+            let filter = intolerences.joined(separator: ",").replacingOccurrences(of: " ", with: "%20")
+            urlString! += "&intolerances=\(filter)"
+        }
+    }
+    
+    return urlString!
+    
 }
 
 extension UIImageView {
@@ -250,5 +255,21 @@ extension UIImageView {
     func downloaded(from link: String) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url)
+    }
+}
+
+extension UICollectionView {
+    func setEmptyMessage(_ message: String) {
+        let msgLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        msgLabel.text = message
+        msgLabel.textAlignment = .center
+        msgLabel.font = UIFont(name: "System", size: 20)
+        msgLabel.sizeToFit()
+        
+        self.backgroundView = msgLabel
+    }
+    
+    func restore() {
+        self.backgroundView = nil
     }
 }

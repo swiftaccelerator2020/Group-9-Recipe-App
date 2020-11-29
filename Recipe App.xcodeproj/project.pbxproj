@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453A0B9A2573374B00E324BE /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A0B992573374B00E324BE /* Recipe.swift */; };
+		453A0B9D2573428100E324BE /* API Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A0B9C2573428000E324BE /* API Keys.swift */; };
 		45445D93256E326300FCD807 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445D92256E326300FCD807 /* AppDelegate.swift */; };
 		45445D95256E326300FCD807 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445D94256E326300FCD807 /* SceneDelegate.swift */; };
 		45445D97256E326300FCD807 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445D96256E326300FCD807 /* RecipeViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453A0B992573374B00E324BE /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		453A0B9C2573428000E324BE /* API Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Keys.swift"; sourceTree = "<group>"; };
 		45445D8F256E326300FCD807 /* Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45445D92256E326300FCD807 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45445D94256E326300FCD807 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,13 +78,15 @@
 				45445D94256E326300FCD807 /* SceneDelegate.swift */,
 				45445D96256E326300FCD807 /* RecipeViewController.swift */,
 				45AB097425720DB500C926A1 /* RecipeSearchViewController.swift */,
-				4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */,
-				45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */,
-				45445D98256E326300FCD807 /* Main.storyboard */,
 				45AB097825721FD000C926A1 /* RecipeDetailsViewController.swift */,
+				4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */,
+				453A0B992573374B00E324BE /* Recipe.swift */,
+				453A0B9C2573428000E324BE /* API Keys.swift */,
 				482124782570BF8C00EE5F9D /* PreferencesViewController.swift */,
-				455F7800256F914A00137897 /* Colours.swift */,
+				45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */,
 				4821247B2570C21E00EE5F9D /* GetStartedViewController.swift */,
+				455F7800256F914A00137897 /* Colours.swift */,
+				45445D98256E326300FCD807 /* Main.storyboard */,
 				45445D9B256E326E00FCD807 /* Assets.xcassets */,
 				45445D9D256E326E00FCD807 /* LaunchScreen.storyboard */,
 				45445DA0256E326E00FCD807 /* Info.plist */,
@@ -165,9 +171,11 @@
 				45AB097525720DB500C926A1 /* RecipeSearchViewController.swift in Sources */,
 				45445D97256E326300FCD807 /* RecipeViewController.swift in Sources */,
 				482124792570BF8C00EE5F9D /* PreferencesViewController.swift in Sources */,
+				453A0B9D2573428100E324BE /* API Keys.swift in Sources */,
 				45445D93256E326300FCD807 /* AppDelegate.swift in Sources */,
 				45445D95256E326300FCD807 /* SceneDelegate.swift in Sources */,
 				4821247C2570C21E00EE5F9D /* GetStartedViewController.swift in Sources */,
+				453A0B9A2573374B00E324BE /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

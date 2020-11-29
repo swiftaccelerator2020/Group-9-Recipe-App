@@ -488,7 +488,6 @@
                                             <constraint firstAttribute="trailing" secondItem="s0M-Mj-7DZ" secondAttribute="trailing" constant="20" id="aQ1-ir-MZP"/>
                                             <constraint firstItem="Qdb-ew-ZgR" firstAttribute="leading" secondItem="q7X-RX-xch" secondAttribute="leading" constant="20" id="alG-7p-LiE"/>
                                             <constraint firstAttribute="trailing" secondItem="KCQ-gI-8jf" secondAttribute="trailing" constant="20" id="bW8-Pw-MVS"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="737" id="c53-Ff-aQT"/>
                                             <constraint firstAttribute="trailing" secondItem="sdE-NI-jIR" secondAttribute="trailing" constant="20" id="dYQ-Sy-KBw"/>
                                             <constraint firstAttribute="bottom" secondItem="jJC-qA-LFy" secondAttribute="bottom" constant="17" id="duQ-vF-Emz"/>
                                             <constraint firstItem="sdE-NI-jIR" firstAttribute="top" secondItem="A0u-44-dYa" secondAttribute="bottom" constant="17" id="fhT-U7-jrY"/>
@@ -510,7 +509,6 @@
                                 <constraints>
                                     <constraint firstItem="q7X-RX-xch" firstAttribute="leading" secondItem="z9g-1T-2k3" secondAttribute="leading" id="IW6-6O-Wv9"/>
                                     <constraint firstItem="q7X-RX-xch" firstAttribute="top" secondItem="z9g-1T-2k3" secondAttribute="top" id="MS1-RJ-o08"/>
-                                    <constraint firstItem="q7X-RX-xch" firstAttribute="bottom" secondItem="z9g-1T-2k3" secondAttribute="bottom" constant="189" id="UKq-QT-rD5"/>
                                     <constraint firstItem="q7X-RX-xch" firstAttribute="width" secondItem="z9g-1T-2k3" secondAttribute="width" id="Xmz-0J-o9C"/>
                                     <constraint firstItem="q7X-RX-xch" firstAttribute="trailing" secondItem="z9g-1T-2k3" secondAttribute="trailing" id="ice-Tb-r8a"/>
                                     <constraint firstItem="q7X-RX-xch" firstAttribute="top" secondItem="2w7-qZ-plw" secondAttribute="top" id="lrT-me-gZh"/>

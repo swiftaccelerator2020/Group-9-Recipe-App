@@ -665,7 +665,7 @@
                                     <constraint firstAttribute="trailing" secondItem="6rI-Rh-mmI" secondAttribute="trailing" id="kmu-EQ-EqE"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aBr-HZ-q3P">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="aBr-HZ-q3P">
                                 <rect key="frame" x="50" y="413" width="314" height="268.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="rWb-HX-CDb">

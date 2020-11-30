@@ -964,13 +964,51 @@
                                                     <constraint firstAttribute="width" secondItem="AjH-4s-0mn" secondAttribute="height" multiplier="157:116" id="wgb-g3-spb"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-8t-yhX">
+                                                <rect key="frame" x="50" y="352" width="314" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="HbU-2T-nX0"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRm-14-qhB">
+                                                <rect key="frame" x="50" y="307" width="61" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49a-YB-L4Y">
+                                                <rect key="frame" x="50" y="427" width="101" height="30"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVN-0i-bb4">
+                                                <rect key="frame" x="50" y="472" width="314" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="mOh-sQ-Dgi"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="AjH-4s-0mn" firstAttribute="leading" secondItem="o7g-ZV-j4v" secondAttribute="leading" constant="50" id="08N-mt-GNR"/>
+                                            <constraint firstItem="hRm-14-qhB" firstAttribute="top" secondItem="AjH-4s-0mn" secondAttribute="bottom" constant="25" id="0DA-tC-uUa"/>
+                                            <constraint firstItem="49a-YB-L4Y" firstAttribute="top" secondItem="Bzf-8t-yhX" secondAttribute="bottom" constant="25" id="1fV-9t-cUf"/>
+                                            <constraint firstAttribute="trailing" secondItem="pVN-0i-bb4" secondAttribute="trailing" constant="50" id="4Fo-vb-bum"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="49a-YB-L4Y" secondAttribute="trailing" constant="20" symbolic="YES" id="AWy-Sw-jX2"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hRm-14-qhB" secondAttribute="trailing" constant="20" symbolic="YES" id="CUZ-EZ-zZE"/>
                                             <constraint firstAttribute="height" constant="792" id="EKw-fz-fMQ"/>
+                                            <constraint firstItem="Bzf-8t-yhX" firstAttribute="leading" secondItem="o7g-ZV-j4v" secondAttribute="leading" constant="50" id="Ed7-a7-dTW"/>
+                                            <constraint firstItem="hRm-14-qhB" firstAttribute="leading" secondItem="o7g-ZV-j4v" secondAttribute="leading" constant="50" id="Gk7-uk-21Q"/>
                                             <constraint firstAttribute="trailing" secondItem="AjH-4s-0mn" secondAttribute="trailing" constant="50" id="N7C-Ie-ith"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bzf-8t-yhX" secondAttribute="trailing" constant="50" id="T13-zm-Vfb"/>
+                                            <constraint firstItem="pVN-0i-bb4" firstAttribute="leading" secondItem="o7g-ZV-j4v" secondAttribute="leading" constant="50" id="V1X-G2-8Ns"/>
+                                            <constraint firstItem="pVN-0i-bb4" firstAttribute="top" secondItem="49a-YB-L4Y" secondAttribute="bottom" constant="15" id="aAq-a2-v56"/>
                                             <constraint firstItem="AjH-4s-0mn" firstAttribute="top" secondItem="o7g-ZV-j4v" secondAttribute="top" constant="50" id="jF1-ld-MQJ"/>
+                                            <constraint firstItem="Bzf-8t-yhX" firstAttribute="top" secondItem="hRm-14-qhB" secondAttribute="bottom" constant="15" id="nNn-mX-5Bu"/>
+                                            <constraint firstItem="49a-YB-L4Y" firstAttribute="leading" secondItem="o7g-ZV-j4v" secondAttribute="leading" constant="50" id="ysv-aJ-7iN"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -999,6 +1037,10 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="sMP-h2-nf9"/>
                     <connections>
+                        <outlet property="cuisinesTagCollectionUIView" destination="pVN-0i-bb4" id="gDH-Jb-4Tz"/>
+                        <outlet property="cuisinesTagLabel" destination="49a-YB-L4Y" id="3Pg-dv-Zlx"/>
+                        <outlet property="dietsTagCollectionUIView" destination="Bzf-8t-yhX" id="9hU-bB-iRk"/>
+                        <outlet property="dietsTagLabel" destination="hRm-14-qhB" id="K88-70-kQk"/>
                         <outlet property="recipeImageView" destination="p0b-XV-CH2" id="M4p-nb-u0T"/>
                         <outlet property="recipeUIView" destination="AjH-4s-0mn" id="iXX-Il-nAm"/>
                     </connections>

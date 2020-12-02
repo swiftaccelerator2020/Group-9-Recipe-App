@@ -25,6 +25,18 @@ struct RecipesInfo: Decodable {
     let nutrition: RecipeNutrition?
     let analyzedInstructions: [RecipeInstructions]?
     
+    var caloriesCarbFatsProteins: [RecipeNutrients] {
+        var nutrientArray: [RecipeNutrients] = []
+        if let nutrition = nutrition, let nutrients = nutrition.nutrients {
+            for nutrient in nutrients {
+                if ["Calories", "Fat", "Carbohydrates", "Protein"].contains(nutrient.title) {
+                    nutrientArray.append(nutrient)
+                }
+            }
+        }
+        return nutrientArray
+    }
+    
     var equipments: [RecipeStepEquipment] {
         var equipmentsArray: [RecipeStepEquipment] = []
         if let analyzedInstructions = analyzedInstructions {

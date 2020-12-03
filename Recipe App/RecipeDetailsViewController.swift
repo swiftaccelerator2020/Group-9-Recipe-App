@@ -62,6 +62,7 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var servingsLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,18 +70,16 @@ class RecipeDetailsViewController: UIViewController {
             if let tableview = tableview {
                 tableview.delegate = self
                 tableview.dataSource = self
+                
+                tableview.rowHeight = UITableView.automaticDimension
             }
         }
         
-        for uiview in [recipeUIView] {
-            if let uiview = uiview {
-                uiview.layer.shadowColor = UIColor.gray.cgColor
-                uiview.layer.shadowOpacity = 1
-                uiview.layer.shadowOffset = CGSize(width: 1, height: 1)
-                uiview.layer.cornerRadius = 15
-                uiview.clipsToBounds = false
-            }
-        }
+        recipeUIView.layer.shadowColor = UIColor.gray.cgColor
+        recipeUIView.layer.shadowOpacity = 1
+        recipeUIView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        recipeUIView.layer.cornerRadius = 15
+        recipeUIView.clipsToBounds = false
         
         recipeImageView.layer.cornerRadius = 15
         recipeImageView.clipsToBounds = true
@@ -96,18 +95,34 @@ class RecipeDetailsViewController: UIViewController {
                 self.likesLabel.text = formatLikesNumber(likes)
             }
             if let time = recipes.readyInMinutes {
-                self.timeLabel.text = "\(time) min"
+                if time == 1 {
+                    self.timeLabel.text = "\(time) min"
+                } else {
+                    self.timeLabel.text = "\(time) mins"
+                }
             }
             if let servings = recipes.servings {
-                self.servingsLabel.text = "\(servings) servings"
+                if servings == 1 {
+                    self.servingsLabel.text = "\(servings) serving"
+                } else {
+                    self.servingsLabel.text = "\(servings) servings"
+                }
             }
             if let nutrition = recipes.nutrition {
                 if let ingredients = nutrition.ingredients {
-                    self.ingredientsLabel.text = "\(ingredients.count) Ingredients"
+                    if ingredients.count == 1 {
+                        self.ingredientsLabel.text = "\(ingredients.count) Ingredient"
+                    } else {
+                        self.ingredientsLabel.text = "\(ingredients.count) Ingredients"
+                    }
                 }
             }
             if let analyzedInstructions = recipes.analyzedInstructions, let steps = analyzedInstructions[0].steps {
-                self.stepsLabel.text = "\(steps.count) Steps"
+                if steps.count == 1 {
+                    self.stepsLabel.text = "\(steps.count) Step"
+                } else {
+                    self.stepsLabel.text = "\(steps.count) Steps"
+                }
             }
         }
     }
@@ -197,7 +212,7 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
                 let step = steps[indexPath.row]
                 let cell = stepsTableView.dequeueReusableCell(withIdentifier: "stepCell") as! StepTableViewCell
                 cell.stepNumberLabel.text = "Step \(indexPath.row + 1)"
-                cell.stepInstructionLabel.text = "\(step.step ?? "")"
+                cell.stepInstructionLabel.text = "\(step.step!.replacingOccurrences(of: ".", with: ". ").replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil))"
                 return cell
             }
             return StepTableViewCell()

@@ -72,6 +72,8 @@ class RecipeDetailsViewController: UIViewController {
                 tableview.dataSource = self
                 
                 tableview.rowHeight = UITableView.automaticDimension
+                tableview.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
+
             }
         }
         

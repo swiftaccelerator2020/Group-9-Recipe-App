@@ -63,17 +63,20 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var servingsLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     
+    @IBOutlet weak var ingredientsTableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nutritionTableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stepsTableViewHeightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for tableview in [ingredientsTableView, nutritionTableView, stepsTableView] {
-            if let tableview = tableview {
-                tableview.delegate = self
-                tableview.dataSource = self
+        for tableView in [ingredientsTableView, nutritionTableView, stepsTableView] {
+            if let tableView = tableView {
+                tableView.delegate = self
+                tableView.dataSource = self
                 
-                tableview.rowHeight = UITableView.automaticDimension
-                tableview.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
-
+                tableView.rowHeight = UITableView.automaticDimension
+                tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
             }
         }
         
@@ -129,6 +132,12 @@ class RecipeDetailsViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        ingredientsTableViewHeightConstraint.constant = ingredientsTableView.contentSize.height
+        nutritionTableViewHeightConstraint.constant = nutritionTableView.contentSize.height
+        stepsTableViewHeightConstraint.constant = stepsTableView.contentSize.height
+    }
+    
     func formatLikesNumber(_ n: Int) -> String {
         let num = abs(Double(n))
         let sign = (n < 0) ? "-" : ""
@@ -169,6 +178,7 @@ extension Double {
 }
 
 extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == ingredientsTableView {
             if let recipes = recipes, let nutrition = recipes.nutrition, let ingredients = nutrition.ingredients {
@@ -214,7 +224,7 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
                 let step = steps[indexPath.row]
                 let cell = stepsTableView.dequeueReusableCell(withIdentifier: "stepCell") as! StepTableViewCell
                 cell.stepNumberLabel.text = "Step \(indexPath.row + 1)"
-                cell.stepInstructionLabel.text = "\(step.step!.replacingOccurrences(of: ".", with: ". ").replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil))"
+                cell.stepInstructionLabel.text = "\(step.step!.replacingOccurrences(of: ".", with: ". ").replacingOccurrences(of: "!", with: "! ").replacingOccurrences(of: ",", with: ", ").replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil))"
                 return cell
             }
             return StepTableViewCell()

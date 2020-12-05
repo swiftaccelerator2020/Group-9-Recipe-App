@@ -23,6 +23,7 @@
 		45AB097925721FD000C926A1 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AB097825721FD000C926A1 /* RecipeDetailsViewController.swift */; };
 		482124792570BF8C00EE5F9D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482124782570BF8C00EE5F9D /* PreferencesViewController.swift */; };
 		4821247C2570C21E00EE5F9D /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4821247B2570C21E00EE5F9D /* GetStartedViewController.swift */; };
+		488FF55A257B358A00FAFEAF /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FF559257B358900FAFEAF /* StepsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		45AB097825721FD000C926A1 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		482124782570BF8C00EE5F9D /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		4821247B2570C21E00EE5F9D /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		488FF559257B358900FAFEAF /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				45445D9B256E326E00FCD807 /* Assets.xcassets */,
 				45445D9D256E326E00FCD807 /* LaunchScreen.storyboard */,
 				45445DA0256E326E00FCD807 /* Info.plist */,
+				488FF559257B358900FAFEAF /* StepsViewController.swift */,
 			);
 			path = "Recipe App";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				482124792570BF8C00EE5F9D /* PreferencesViewController.swift in Sources */,
 				453A0B9D2573428100E324BE /* API Keys.swift in Sources */,
 				45445D93256E326300FCD807 /* AppDelegate.swift in Sources */,
+				488FF55A257B358A00FAFEAF /* StepsViewController.swift in Sources */,
 				45445D95256E326300FCD807 /* SceneDelegate.swift in Sources */,
 				4821247C2570C21E00EE5F9D /* GetStartedViewController.swift in Sources */,
 				453A0B9A2573374B00E324BE /* Recipe.swift in Sources */,

@@ -72,6 +72,12 @@ class RecipeIngredientsViewController: UIViewController {
         }
     }
     
+    @IBAction func cookButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "StepsViewController") as? StepsViewController
+        vc?.recipes = recipes
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         ingredientsTableViewHeightConstraint.constant = ingredientsTableView.contentSize.height
         equipmentTableViewHeightConstraint.constant = equipmentTableView.contentSize.height

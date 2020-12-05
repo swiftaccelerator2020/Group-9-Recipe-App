@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StepTableViewCell: UITableViewCell {
+class OverviewStepTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var stepNumberLabel: UILabel!
@@ -23,19 +23,17 @@ class StepTableViewCell: UITableViewCell {
     }
 }
 
-class IngredientTableViewCell: UITableViewCell {
+class OverviewIngredientTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ingredientNameLabel: UILabel!
     @IBOutlet weak var ingredientUnitLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
-    
 }
 
-class NutritionTableViewCell: UITableViewCell {
+class OverviewNutritionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nutritionNameLabel: UILabel!
     @IBOutlet weak var nutritionUnitLabel: UILabel!
@@ -89,12 +87,12 @@ class RecipeDetailsViewController: UIViewController {
         recipeImageView.layer.cornerRadius = 15
         recipeImageView.clipsToBounds = true
         
-        
-        self.recipeImageView.downloaded(from: recipes?.image ?? "https://i.stack.imgur.com/Vkq2a.png")
-        
         if let recipes = recipes {
             if let title = recipes.title {
                 self.title = title
+            }
+            if let image = recipes.image {
+                self.recipeImageView.downloaded(from: image)
             }
             if let likes = recipes.aggregateLikes {
                 self.likesLabel.text = formatLikesNumber(likes)
@@ -165,6 +163,13 @@ class RecipeDetailsViewController: UIViewController {
             return "\(sign)\(n)"
         }
     }
+    
+    @IBAction func cookButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "RecipeIngredientsViewController") as? RecipeIngredientsViewController
+        vc?.recipes = recipes
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 }
 
 extension Double {
@@ -204,30 +209,30 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
         if tableView == ingredientsTableView {
             if let recipes = recipes, let nutrition = recipes.nutrition, let ingredients = nutrition.ingredients {
                 let ingredient = ingredients[indexPath.row]
-                let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! IngredientTableViewCell
+                let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! OverviewIngredientTableViewCell
                 cell.ingredientNameLabel.text = "\(ingredient.name ?? "")"
                 cell.ingredientUnitLabel.text = "\(ingredient.amount ?? 0.0) \(ingredient.unit ?? "")"
                 return cell
             }
-            return IngredientTableViewCell()
+            return OverviewIngredientTableViewCell()
         } else if tableView == nutritionTableView {
             if let recipes = recipes {
                 let nutrition = recipes.caloriesCarbFatsProteins[indexPath.row]
-                let cell = nutritionTableView.dequeueReusableCell(withIdentifier: "nutritionCell") as! NutritionTableViewCell
+                let cell = nutritionTableView.dequeueReusableCell(withIdentifier: "nutritionCell") as! OverviewNutritionTableViewCell
                 cell.nutritionNameLabel.text = "\(nutrition.title ?? "")"
                 cell.nutritionUnitLabel.text = "\(nutrition.amount ?? 0) \(nutrition.unit ?? "")"
                 return cell
             }
-            return NutritionTableViewCell()
+            return OverviewNutritionTableViewCell()
         } else if tableView == stepsTableView {
             if let recipes = recipes, let analyzedInstructions = recipes.analyzedInstructions, let steps = analyzedInstructions[0].steps {
                 let step = steps[indexPath.row]
-                let cell = stepsTableView.dequeueReusableCell(withIdentifier: "stepCell") as! StepTableViewCell
+                let cell = stepsTableView.dequeueReusableCell(withIdentifier: "stepCell") as! OverviewStepTableViewCell
                 cell.stepNumberLabel.text = "Step \(indexPath.row + 1)"
                 cell.stepInstructionLabel.text = "\(step.step!.replacingOccurrences(of: ".", with: ". ").replacingOccurrences(of: "!", with: "! ").replacingOccurrences(of: ",", with: ", ").replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil))"
                 return cell
             }
-            return StepTableViewCell()
+            return OverviewStepTableViewCell()
         }
         return UITableViewCell()
     }

@@ -59,6 +59,17 @@ class StepsViewController: UIViewController {
             }
         }
     }
+    @IBAction func finishButtonPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "FinishRecipeViewController") as? FinishRecipeViewController
+        vc?.recipes = recipes
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
+    @IBAction func backToStepsViewController(with segue: UIStoryboardSegue) {
+        if segue.identifier == "closeOutOfFinish" {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }
 
 extension StepsViewController: UITableViewDelegate, UITableViewDataSource {

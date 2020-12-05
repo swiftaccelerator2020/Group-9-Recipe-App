@@ -57,5 +57,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSHealthShareUsageDescription</key>
+	<string>pls add this lul</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>add this toooo</string>
 </dict>
 </plist>

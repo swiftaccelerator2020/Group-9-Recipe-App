@@ -12,7 +12,7 @@ class StepsTableViewCell: UITableViewCell {
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var timerImage: UIImageView!
-    @IBOutlet weak var checkmarkButton: UIButton!
+    //@IBOutlet weak var checkmarkButton: UIButton!
     @IBOutlet weak var instructionsLabel: UILabel!
     
     var stepIndex: Int?
@@ -49,7 +49,6 @@ class StepsViewController: UIViewController {
                 tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
             }
         }
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,18 +59,6 @@ class StepsViewController: UIViewController {
             }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension StepsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -100,11 +87,9 @@ extension StepsViewController: UITableViewDelegate, UITableViewDataSource {
                 if let instructions = step.step {
                     cell.instructionsLabel.text = instructions
                 }
-                cell.checkmarkButton.tag = indexPath.row
-                cell.checkmarkButton.isSelected = stepsChecklist[indexPath.row]
-                cell.checkmarkButton.addTarget(self, action: #selector(checkboxTapped(_:)), for: .touchUpInside)
-                
-                
+//                cell.checkmarkButton.tag = indexPath.row
+//                cell.checkmarkButton.isSelected = stepsChecklist[indexPath.row]
+//                cell.checkmarkButton.addTarget(self, action: #selector(checkboxTapped(_:)), for: .touchUpInside)
                 return cell
             }
             return StepsTableViewCell()
@@ -112,23 +97,23 @@ extension StepsViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
-    @objc func checkboxTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-        stepsChecklist[sender.tag] = sender.isSelected
-        checkStepsCompletion()
-    }
-    
-    func checkStepsCompletion() {
-        if stepsChecklist.contains(false) {
-            noticeLabel.isHidden = false
-            finishButton.isHidden = true
-            finishButton.isEnabled = false
-        } else {
-            noticeLabel.isHidden = true
-            finishButton.isEnabled = true
-            finishButton.isHidden = false
-        }
-    }
+//    @objc func checkboxTapped(_ sender: UIButton) {
+//        sender.isSelected = !sender.isSelected
+//        stepsChecklist[sender.tag] = sender.isSelected
+//        checkStepsCompletion()
+//    }
+//
+//    func checkStepsCompletion() {
+//        if stepsChecklist.contains(false) {
+//            noticeLabel.isHidden = false
+//            finishButton.isHidden = true
+//            finishButton.isEnabled = false
+//        } else {
+//            noticeLabel.isHidden = true
+//            finishButton.isEnabled = true
+//            finishButton.isHidden = false
+//        }
+//    }
     
     
 }

@@ -33,13 +33,13 @@ class PreferencesViewController: UIViewController {
         dietsView.layer.shadowOpacity = 1
         dietsView.layer.shadowOffset = CGSize(width: 1, height: 1)
         dietsView.clipsToBounds = false
-        dietsView.layer.cornerRadius = 10
+        dietsView.layer.cornerRadius = 20
         
         intolerencesView.layer.shadowColor = UIColor.gray.cgColor
         intolerencesView.layer.shadowOpacity = 1
         intolerencesView.layer.shadowOffset = CGSize(width: 1, height: 1)
         intolerencesView.clipsToBounds = false
-        intolerencesView.layer.cornerRadius = 10
+        intolerencesView.layer.cornerRadius = 20
     }
     
     @IBAction func backToPreferencesViewController(with segue: UIStoryboardSegue) {

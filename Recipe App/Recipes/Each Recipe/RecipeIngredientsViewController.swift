@@ -85,6 +85,16 @@ class RecipeIngredientsViewController: UIViewController {
 
 }
 
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
+
 extension RecipeIngredientsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,7 +118,7 @@ extension RecipeIngredientsViewController: UITableViewDelegate, UITableViewDataS
             if let recipes = recipes, let nutrition = recipes.nutrition, let ingredients = nutrition.ingredients {
                 let ingredient = ingredients[indexPath.row]
                 let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! IngredientTableViewCell
-                cell.ingredientNameLabel.text = "\(ingredient.name ?? "")"
+                cell.ingredientNameLabel.text = "\(ingredient.name?.capitalizingFirstLetter() ?? "")"
                 cell.ingredientUnitLabel.text = "\(ingredient.amount ?? 0.0) \(ingredient.unit ?? "")"
                 cell.ingredientButton.addTarget(self, action: #selector(checkboxTapped(_ :)), for: .touchUpInside)
                 return cell
@@ -118,7 +128,7 @@ extension RecipeIngredientsViewController: UITableViewDelegate, UITableViewDataS
             if let recipes = recipes {
                 let equipment = recipes.equipments[indexPath.row]
                 let cell = equipmentTableView.dequeueReusableCell(withIdentifier: "equipmentCell") as! EquipmentTableViewCell
-                cell.equipmentNameLabel.text = "\(equipment.name ?? "")"
+                cell.equipmentNameLabel.text = "\(equipment.name?.capitalizingFirstLetter() ?? "")"
                 cell.equipmentButton.addTarget(self, action: #selector(checkboxTapped(_ :)), for: .touchUpInside)
                 return cell
             }

@@ -10,6 +10,7 @@ import HealthKit
 
 class FinishRecipeViewController: UIViewController {
     
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var recipeLabel: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var caloriesLabel: UILabel!
@@ -27,6 +28,17 @@ class FinishRecipeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cardView.layer.shadowColor = UIColor.gray.cgColor
+        cardView.layer.shadowOpacity = 1
+        cardView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        cardView.layer.cornerRadius = 15
+        cardView.clipsToBounds = false
+        
+        recipeImage.layer.cornerRadius = 15
+        recipeImage.clipsToBounds = true
+        
+        
         
         if let recipes = recipes {
             if let title = recipes.title {

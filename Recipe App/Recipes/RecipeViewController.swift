@@ -186,6 +186,15 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
                     }
 
                     self.recipes = data.results
+                    for recipe in self.recipes! {
+                        if let analyzedInstructions = recipe.analyzedInstructions {
+                            if analyzedInstructions.count == 0 {
+                                if let index = self.recipes!.firstIndex(of: recipe) {
+                                    self.recipes!.remove(at: index)
+                                }
+                            }
+                        }
+                    }
                     
                     let defaults = UserDefaults.standard
                     defaults.set(0, forKey: "connectionTries")

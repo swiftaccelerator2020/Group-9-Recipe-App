@@ -210,7 +210,7 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
             if let recipes = recipes, let nutrition = recipes.nutrition, let ingredients = nutrition.ingredients {
                 let ingredient = ingredients[indexPath.row]
                 let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! OverviewIngredientTableViewCell
-                cell.ingredientNameLabel.text = "\(ingredient.name ?? "")"
+                cell.ingredientNameLabel.text = "\(ingredient.name?.capitalizingFirstLetter() ?? "")"
                 cell.ingredientUnitLabel.text = "\(ingredient.amount ?? 0.0) \(ingredient.unit ?? "")"
                 return cell
             }
@@ -219,7 +219,7 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
             if let recipes = recipes {
                 let nutrition = recipes.caloriesCarbFatsProteins[indexPath.row]
                 let cell = nutritionTableView.dequeueReusableCell(withIdentifier: "nutritionCell") as! OverviewNutritionTableViewCell
-                cell.nutritionNameLabel.text = "\(nutrition.title ?? "")"
+                cell.nutritionNameLabel.text = "\(nutrition.title?.capitalizingFirstLetter() ?? "")"
                 cell.nutritionUnitLabel.text = "\(nutrition.amount ?? 0) \(nutrition.unit ?? "")"
                 return cell
             }

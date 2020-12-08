@@ -45,6 +45,8 @@ class RecipeIngredientsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Ingredients & Equipment"
+        
         for tableView in [ingredientsTableView, equipmentTableView] {
             if let tableView = tableView {
                 tableView.delegate = self
@@ -56,9 +58,6 @@ class RecipeIngredientsViewController: UIViewController {
         }
         
         if let recipes = recipes {
-            if let title = recipes.title {
-                self.title = title
-            }
             if let nutrition = recipes.nutrition {
                 if let ingredients = nutrition.ingredients {
                     if ingredients.count == 1 {
@@ -73,7 +72,7 @@ class RecipeIngredientsViewController: UIViewController {
     }
     
     @IBAction func cookButtonPressed(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "StepsViewController") as? StepsViewController
+        let vc = storyboard?.instantiateViewController(identifier: "RecipeStepsViewController") as? RecipeStepsViewController
         vc?.recipes = recipes
         self.navigationController?.pushViewController(vc!, animated: true)
     }

@@ -1,5 +1,5 @@
 //
-//  StepsViewController.swift
+//  RecipeStepsViewController.swift
 //  Recipe App
 //
 //  Created by Johansan on 5/12/20.
@@ -29,7 +29,7 @@ class StepsTableViewCell: UITableViewCell {
     }
 }
 
-class StepsViewController: UIViewController {
+class RecipeStepsViewController: UIViewController {
     
     var recipes: RecipesInfo?
     var stepsChecklist: [Bool] = []
@@ -39,6 +39,8 @@ class StepsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Steps"
         
         for tableView in [stepsTableView] {
             if let tableView = tableView {
@@ -72,7 +74,7 @@ class StepsViewController: UIViewController {
     }
 }
 
-extension StepsViewController: UITableViewDelegate, UITableViewDataSource {
+extension RecipeStepsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == stepsTableView {
@@ -96,7 +98,7 @@ extension StepsViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.timerImage.tintColor = .white
                 }
                 if let instructions = step.step {
-                    cell.instructionsLabel.text = instructions
+                    cell.instructionsLabel.text = instructions.replacingOccurrences(of: ".", with: ". ").replacingOccurrences(of: "!", with: "! ").replacingOccurrences(of: ",", with: ", ").replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil)
                 }
 //                cell.checkmarkButton.tag = indexPath.row
 //                cell.checkmarkButton.isSelected = stepsChecklist[indexPath.row]
@@ -106,6 +108,29 @@ extension StepsViewController: UITableViewDelegate, UITableViewDataSource {
             return StepsTableViewCell()
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "RecipeStepDetailsViewController") as? RecipeStepDetailsViewController
+        var hasTimer: Bool?
+        var timerLength: Int?
+        if let recipes = recipes, let analyzedInstructions = recipes.analyzedInstructions, let steps = analyzedInstructions[0].steps {
+            let step = steps[indexPath.row]
+            if let _ = step.length {
+                timerLength = step.length?.number
+                hasTimer = true
+            } else {
+                hasTimer = false
+                timerLength = step.length?.number
+            }
+        }
+        vc?.hasTimer = hasTimer
+        vc?.timerLength = timerLength
+        vc?.stepNumber = indexPath.row + 1
+        vc?.stepInstructions = recipes?.analyzedInstructions?[0].steps?[indexPath.row].step
+        vc?.ingredients =  recipes?.analyzedInstructions?[0].steps?[indexPath.row].ingredients
+        vc?.equipment = recipes?.analyzedInstructions?[0].steps?[indexPath.row].equipment
+        self.present(vc!, animated: true, completion: nil)
     }
     
 //    @objc func checkboxTapped(_ sender: UIButton) {

@@ -22,11 +22,15 @@ class PreferencesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dietsTableView.delegate = self
-        dietsTableView.dataSource = self
-        
-        intolerencesTableView.delegate = self
-        intolerencesTableView.dataSource = self
+        for tableView in [dietsTableView, intolerencesTableView] {
+            if let tableView = tableView {
+                tableView.delegate = self
+                tableView.dataSource = self
+                
+                tableView.rowHeight = UITableView.automaticDimension
+                tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
+            }
+        }
         
         /*
         dietsView.layer.shadowColor = UIColor.gray.cgColor

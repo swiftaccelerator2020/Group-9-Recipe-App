@@ -17,13 +17,14 @@
 		45445D9F256E326E00FCD807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45445D9D256E326E00FCD807 /* LaunchScreen.storyboard */; };
 		45445DC9256E6DB900FCD807 /* UIPreferenceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */; };
 		455F7801256F914B00137897 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F7800256F914A00137897 /* Colours.swift */; };
+		45666B4B257F6FFC0095ABEF /* RecipeStepDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666B4A257F6FFC0095ABEF /* RecipeStepDetailsViewController.swift */; };
 		4575AC52256FA799006CF008 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */; };
 		459BFA8D2579F0B2006FAA91 /* RecipeIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BFA8C2579F0B2006FAA91 /* RecipeIngredientsViewController.swift */; };
 		45AB097525720DB500C926A1 /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AB097425720DB500C926A1 /* RecipeSearchViewController.swift */; };
 		45AB097925721FD000C926A1 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AB097825721FD000C926A1 /* RecipeDetailsViewController.swift */; };
 		482124792570BF8C00EE5F9D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482124782570BF8C00EE5F9D /* PreferencesViewController.swift */; };
 		4821247C2570C21E00EE5F9D /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4821247B2570C21E00EE5F9D /* GetStartedViewController.swift */; };
-		488FF55A257B358A00FAFEAF /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FF559257B358900FAFEAF /* StepsViewController.swift */; };
+		488FF55A257B358A00FAFEAF /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FF559257B358900FAFEAF /* RecipeStepsViewController.swift */; };
 		488FF560257BC83000FAFEAF /* FinishRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FF55F257BC83000FAFEAF /* FinishRecipeViewController.swift */; };
 		488FF565257BC86000FAFEAF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488FF564257BC86000FAFEAF /* HealthKit.framework */; };
 /* End PBXBuildFile section */
@@ -41,13 +42,14 @@
 		45445DA0256E326E00FCD807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreferenceButton.swift; sourceTree = "<group>"; };
 		455F7800256F914A00137897 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
+		45666B4A257F6FFC0095ABEF /* RecipeStepDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeStepDetailsViewController.swift; path = "Recipe App/Recipes/RecipeStepDetailsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		459BFA8C2579F0B2006FAA91 /* RecipeIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsViewController.swift; sourceTree = "<group>"; };
 		45AB097425720DB500C926A1 /* RecipeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewController.swift; sourceTree = "<group>"; };
 		45AB097825721FD000C926A1 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		482124782570BF8C00EE5F9D /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		4821247B2570C21E00EE5F9D /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
-		488FF559257B358900FAFEAF /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		488FF559257B358900FAFEAF /* RecipeStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepsViewController.swift; sourceTree = "<group>"; };
 		488FF55F257BC83000FAFEAF /* FinishRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRecipeViewController.swift; sourceTree = "<group>"; };
 		488FF562257BC85F00FAFEAF /* Recipe App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recipe App.entitlements"; sourceTree = "<group>"; };
 		488FF564257BC86000FAFEAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -135,7 +137,8 @@
 			children = (
 				45AB097825721FD000C926A1 /* RecipeDetailsViewController.swift */,
 				459BFA8C2579F0B2006FAA91 /* RecipeIngredientsViewController.swift */,
-				488FF559257B358900FAFEAF /* StepsViewController.swift */,
+				488FF559257B358900FAFEAF /* RecipeStepsViewController.swift */,
+				45666B4A257F6FFC0095ABEF /* RecipeStepDetailsViewController.swift */,
 				488FF55F257BC83000FAFEAF /* FinishRecipeViewController.swift */,
 			);
 			path = "Each Recipe";
@@ -220,9 +223,10 @@
 				45445D97256E326300FCD807 /* RecipeViewController.swift in Sources */,
 				482124792570BF8C00EE5F9D /* PreferencesViewController.swift in Sources */,
 				488FF560257BC83000FAFEAF /* FinishRecipeViewController.swift in Sources */,
+				45666B4B257F6FFC0095ABEF /* RecipeStepDetailsViewController.swift in Sources */,
 				453A0B9D2573428100E324BE /* API Keys.swift in Sources */,
 				45445D93256E326300FCD807 /* AppDelegate.swift in Sources */,
-				488FF55A257B358A00FAFEAF /* StepsViewController.swift in Sources */,
+				488FF55A257B358A00FAFEAF /* RecipeStepsViewController.swift in Sources */,
 				45445D95256E326300FCD807 /* SceneDelegate.swift in Sources */,
 				4821247C2570C21E00EE5F9D /* GetStartedViewController.swift in Sources */,
 				453A0B9A2573374B00E324BE /* Recipe.swift in Sources */,

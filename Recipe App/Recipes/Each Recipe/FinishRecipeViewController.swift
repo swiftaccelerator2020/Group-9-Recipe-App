@@ -10,13 +10,7 @@ import HealthKit
 
 class FinishRecipeViewController: UIViewController {
     
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var recipeLabel: UILabel!
-    @IBOutlet weak var recipeImage: UIImageView!
-    @IBOutlet weak var caloriesLabel: UILabel!
-    @IBOutlet weak var fatsLabel: UILabel!
-    @IBOutlet weak var carbsLabel: UILabel!
-    @IBOutlet weak var proteinLabel: UILabel!
+    var recipes: RecipesInfo?
     
     let healthStore = HKHealthStore()
     let caloriesType = HKObjectType.quantityType(forIdentifier: .dietaryEnergyConsumed)
@@ -24,21 +18,22 @@ class FinishRecipeViewController: UIViewController {
     let carbsType = HKObjectType.quantityType(forIdentifier: .dietaryCarbohydrates)
     let proteinType = HKObjectType.quantityType(forIdentifier: .dietaryProtein)
     
-    var recipes: RecipesInfo?
+    @IBOutlet weak var recipeLabel: UILabel!
+    @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var nutritionTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cardView.layer.shadowColor = UIColor.gray.cgColor
-        cardView.layer.shadowOpacity = 1
-        cardView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        cardView.layer.cornerRadius = 15
-        cardView.clipsToBounds = false
-        
-        recipeImage.layer.cornerRadius = 15
-        recipeImage.clipsToBounds = true
-        
-        
+        for tableView in [nutritionTableView] {
+            if let tableView = tableView {
+                tableView.delegate = self
+                tableView.dataSource = self
+                
+                tableView.rowHeight = UITableView.automaticDimension
+                tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
+            }
+        }
         
         if let recipes = recipes {
             if let title = recipes.title {
@@ -47,24 +42,7 @@ class FinishRecipeViewController: UIViewController {
             if let image = recipes.image {
                 recipeImage.downloaded(from: image)
             }
-            for nutrient in recipes.caloriesCarbFatsProteins {
-                var label: UILabel?
-                switch nutrient.title {
-                case "Calories":
-                    label = caloriesLabel
-                case "Fat":
-                    label = fatsLabel
-                case "Carbohydrates":
-                    label = carbsLabel
-                case "Protein":
-                    label = proteinLabel
-                default:
-                    label = UILabel()
-                }
-                label?.text = "\(nutrient.amount ?? 0) \(nutrient.unit ?? "")"
-            }
         }
-        // Do any additional setup after loading the view.
     }
 
 
@@ -118,14 +96,32 @@ class FinishRecipeViewController: UIViewController {
             performSegue(withIdentifier: "closeOutOfFinish", sender: nil)
         }
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension FinishRecipeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == nutritionTableView {
+            if let recipes = recipes {
+                let nutrition = recipes.caloriesCarbFatsProteins
+                return nutrition.count
+            }
+            return 0
+        }
+        return 0
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if tableView == nutritionTableView {
+            if let recipes = recipes {
+                let nutrition = recipes.caloriesCarbFatsProteins[indexPath.row]
+                let cell = nutritionTableView.dequeueReusableCell(withIdentifier: "nutritionCell") as! OverviewNutritionTableViewCell
+                cell.nutritionNameLabel.text = "\(nutrition.title?.capitalizingFirstLetter() ?? "")"
+                cell.nutritionUnitLabel.text = "\(nutrition.amount ?? 0) \(nutrition.unit ?? "")"
+                return cell
+            }
+            return OverviewNutritionTableViewCell()
+        }
+        return UITableViewCell()
+    }
 }

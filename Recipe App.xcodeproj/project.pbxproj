@@ -18,6 +18,7 @@
 		45445DC9256E6DB900FCD807 /* UIPreferenceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */; };
 		455F7801256F914B00137897 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F7800256F914A00137897 /* Colours.swift */; };
 		45666B4E257FE4D40095ABEF /* RecipeStepDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45666B4D257FE4D30095ABEF /* RecipeStepDetailsViewController.swift */; };
+		45666B582582316A0095ABEF /* timer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45666B572582316A0095ABEF /* timer.mp3 */; };
 		4575AC52256FA799006CF008 /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */; };
 		459BFA8D2579F0B2006FAA91 /* RecipeIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BFA8C2579F0B2006FAA91 /* RecipeIngredientsViewController.swift */; };
 		45AB097525720DB500C926A1 /* RecipeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AB097425720DB500C926A1 /* RecipeSearchViewController.swift */; };
@@ -43,6 +44,7 @@
 		45445DC8256E6DB900FCD807 /* UIPreferenceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPreferenceButton.swift; sourceTree = "<group>"; };
 		455F7800256F914A00137897 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		45666B4D257FE4D30095ABEF /* RecipeStepDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeStepDetailsViewController.swift; sourceTree = "<group>"; };
+		45666B572582316A0095ABEF /* timer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timer.mp3; sourceTree = "<group>"; };
 		4575AC51256FA799006CF008 /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		459BFA8C2579F0B2006FAA91 /* RecipeIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsViewController.swift; sourceTree = "<group>"; };
 		45AB097425720DB500C926A1 /* RecipeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSearchViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				FAFF5266257E1FD40033552F /* Settings */,
 				FAFF5267257E1FDA0033552F /* Recipes */,
 				45445D9B256E326E00FCD807 /* Assets.xcassets */,
+				45666B572582316A0095ABEF /* timer.mp3 */,
 				45445DA0256E326E00FCD807 /* Info.plist */,
 			);
 			path = "Recipe App";
@@ -201,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45666B582582316A0095ABEF /* timer.mp3 in Resources */,
 				45445D9F256E326E00FCD807 /* LaunchScreen.storyboard in Resources */,
 				45445D9C256E326E00FCD807 /* Assets.xcassets in Resources */,
 				45445D9A256E326300FCD807 /* Main.storyboard in Resources */,

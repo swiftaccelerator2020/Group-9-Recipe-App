@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class RecipeStepDetailsViewController: UIViewController {
     
@@ -20,6 +21,8 @@ class RecipeStepDetailsViewController: UIViewController {
     var timer = Timer()
     var isTimerRunning = false
     var resumeTapped = false
+    
+    var audioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var stepInstructionsLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
@@ -94,6 +97,13 @@ class RecipeStepDetailsViewController: UIViewController {
             seconds = timerLength! * 60
             theTimerLabel.text = timeString(time: TimeInterval(seconds))
         }
+        
+        let sound = Bundle.main.path(forResource: "timer", ofType: "mp3")
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        } catch {
+            print(error)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -146,8 +156,14 @@ class RecipeStepDetailsViewController: UIViewController {
     @objc func updateTimer() {
         if seconds < 1 {
             timer.invalidate()
+            pauseButton.isEnabled = false
+            pauseButton.alpha = 0.7
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            audioPlayer.play()
             let alert = UIAlertController(title: "Time's up!", message: "You can proceed to the next step.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Close", style: .default))
+            alert.addAction(UIAlertAction(title: "Close", style: .default, handler: { (action: UIAlertAction) in
+                self.audioPlayer.stop()
+            }))
             self.present(alert, animated: true, completion: nil)
         } else {
             seconds -= 1

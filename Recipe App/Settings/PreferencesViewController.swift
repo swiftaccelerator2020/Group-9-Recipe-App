@@ -54,6 +54,11 @@ class PreferencesViewController: UIViewController {
             intolerencesTableView.reloadData()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        dietsTableView.reloadData()
+        intolerencesTableView.reloadData()
+    }
 
     @IBAction func resetButtonPressed(_ sender: Any) {
         defaults.set(true, forKey: "isNewUser")

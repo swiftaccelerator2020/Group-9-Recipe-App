@@ -57,9 +57,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSHealthShareUsageDescription</key>
-	<string>pls add this lul</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>add this toooo</string>
+	<string>We require access to HealthKit to store the nutrition of the recipes you just made</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We require access to HealthKit to store the nutrition of the recipes you just made</string>
 </dict>
 </plist>

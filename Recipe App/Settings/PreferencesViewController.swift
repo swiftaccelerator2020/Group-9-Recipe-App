@@ -52,12 +52,8 @@ class PreferencesViewController: UIViewController {
         } else if segue.identifier == "unwindIntolerences" {
             intolerences = defaults.object(forKey: "intolerences") as? [String]
             intolerencesTableView.reloadData()
-        } else {
-            intolerencesTableView.reloadData()
-            dietsTableView.reloadData()
         }
     }
-    
 
     @IBAction func resetButtonPressed(_ sender: Any) {
         defaults.set(true, forKey: "isNewUser")
@@ -79,6 +75,8 @@ class PreferencesViewController: UIViewController {
 extension PreferencesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        diets = defaults.object(forKey: "diets") as? [String]
+        intolerences = defaults.object(forKey: "intolerences") as? [String]
         if tableView == dietsTableView {
             if diets!.count == 0 {
                 return 1

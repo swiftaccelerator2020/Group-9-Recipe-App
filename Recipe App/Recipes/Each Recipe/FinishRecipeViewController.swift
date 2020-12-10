@@ -51,7 +51,7 @@ class FinishRecipeViewController: UIViewController {
         if HKHealthStore.isHealthDataAvailable() {
             
             let allTypes = Set([caloriesType!, fatsType!, carbsType!, proteinType!])
-            healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
+            healthStore.requestAuthorization(toShare: nil, read: allTypes) { (success, error) in
                 if !success {
                     print("authorisation failed")
                 }

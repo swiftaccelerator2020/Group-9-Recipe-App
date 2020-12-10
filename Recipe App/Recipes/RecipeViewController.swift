@@ -9,6 +9,13 @@ import UIKit
 
 private let reuseIdentifier = "recipeCell"
 
+class TabViewController: UITabBarController {
+    
+    @IBAction func backToEntry(with segue: UIStoryboardSegue) {
+        //just for unwind segue; no func
+    }
+}
+
 class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     
     var recipes: [RecipesInfo]?

@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-class RecipeStepDetailsViewController: UIViewController {
+class RecipeStepDetailsViewController: UIViewController, UNUserNotificationCenterDelegate {
     
     var stepNumber: Int?
     var stepInstructions: String?
@@ -23,6 +23,7 @@ class RecipeStepDetailsViewController: UIViewController {
     var resumeTapped = false
     
     var audioPlayer = AVAudioPlayer()
+    let center = UNUserNotificationCenter.current()
     
     @IBOutlet weak var stepInstructionsLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
@@ -45,6 +46,8 @@ class RecipeStepDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        center.delegate = self
         
         title = "Step \(stepNumber ?? 0)"
         
@@ -112,6 +115,11 @@ class RecipeStepDetailsViewController: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: Any) {
+        center.requestAuthorization(options: [.alert, .sound]) { granted, error in
+            if let error = error {
+                print(error)
+            }
+        }
         if isTimerRunning == false {
             runTimer()
             startButton.isEnabled = false
@@ -135,7 +143,7 @@ class RecipeStepDetailsViewController: UIViewController {
     
     @IBAction func resetButtonPressed(_ sender: Any) {
         timer.invalidate()
-        seconds = timerLength! * 60
+        seconds = timerLength!
         theTimerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
         pauseButton.isEnabled = false
@@ -155,16 +163,46 @@ class RecipeStepDetailsViewController: UIViewController {
     
     @objc func updateTimer() {
         if seconds < 1 {
+            
             timer.invalidate()
             pauseButton.isEnabled = false
             pauseButton.alpha = 0.7
+            
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             audioPlayer.play()
+            
             let alert = UIAlertController(title: "Time's up!", message: "You can proceed to the next step.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Close", style: .default, handler: { (action: UIAlertAction) in
                 self.audioPlayer.stop()
             }))
             self.present(alert, animated: true, completion: nil)
+
+            center.getNotificationSettings { settings in
+                guard (settings.authorizationStatus == .authorized) else { return }
+                
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+                
+                if settings.soundSetting == .enabled && settings.alertSetting == .enabled {
+                    let content = UNMutableNotificationContent()
+                    content.title = "Time's Up!"
+                    content.body = "You can proceed to the next step."
+                    content.sound = .defaultCritical
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+                    let request = UNNotificationRequest(identifier: "timesUp", content: content, trigger: trigger)
+                    self.center.add(request, withCompletionHandler: nil)
+                } else {
+                    let content = UNMutableNotificationContent()
+                    content.title = "Time's Up!"
+                    content.body = "You can proceed to the next step."
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+                    let request = UNNotificationRequest(identifier: "timesUp", content: content, trigger: trigger)
+                    self.center.add(request, withCompletionHandler: nil)
+                }
+            }
+            
+
         } else {
             seconds -= 1
             theTimerLabel.text = timeString(time: TimeInterval(seconds))

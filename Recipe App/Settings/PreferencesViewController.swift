@@ -32,7 +32,6 @@ class PreferencesViewController: UIViewController {
             }
         }
         
-        /*
         dietsView.layer.shadowColor = UIColor.gray.cgColor
         dietsView.layer.shadowOpacity = 1
         dietsView.layer.shadowOffset = CGSize(width: 1, height: 1)
@@ -44,7 +43,6 @@ class PreferencesViewController: UIViewController {
         intolerencesView.layer.shadowOffset = CGSize(width: 1, height: 1)
         intolerencesView.clipsToBounds = false
         intolerencesView.layer.cornerRadius = 20
-        */
     }
     
     @IBAction func backToPreferencesViewController(with segue: UIStoryboardSegue) {

@@ -51,7 +51,6 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var nutritionTableView: UITableView!
     @IBOutlet weak var ingredientsTableView: UITableView!
     @IBOutlet weak var recipeImageView: UIImageView!
-    @IBOutlet weak var recipeUIView: UIView!
     
     @IBOutlet weak var likesUIView: UIView!
     @IBOutlet weak var likesLabel: UILabel!
@@ -77,15 +76,6 @@ class RecipeDetailsViewController: UIViewController {
                 tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.1))
             }
         }
-        
-        recipeUIView.layer.shadowColor = UIColor.gray.cgColor
-        recipeUIView.layer.shadowOpacity = 1
-        recipeUIView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        recipeUIView.layer.cornerRadius = 15
-        recipeUIView.clipsToBounds = false
-        
-        recipeImageView.layer.cornerRadius = 15
-        recipeImageView.clipsToBounds = true
         
         if let recipes = recipes {
             if let title = recipes.title {

@@ -15,6 +15,12 @@ class IngredientTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(checkboxTapped(_:))))
+    }
+    
+    @objc func checkboxTapped(_ sender: UITapGestureRecognizer) {
+        self.ingredientButton.isSelected = !self.ingredientButton.isSelected
     }
 }
 
@@ -25,6 +31,12 @@ class EquipmentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(checkboxTapped(_:))))
+    }
+    
+    @objc func checkboxTapped(_ sender: UITapGestureRecognizer) {
+        self.equipmentButton.isSelected = !self.equipmentButton.isSelected
     }
 }
 

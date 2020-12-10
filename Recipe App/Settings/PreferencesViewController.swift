@@ -54,6 +54,9 @@ class PreferencesViewController: UIViewController {
         } else if segue.identifier == "unwindIntolerences" {
             intolerences = defaults.object(forKey: "intolerences") as? [String]
             intolerencesTableView.reloadData()
+        } else {
+            intolerencesTableView.reloadData()
+            dietsTableView.reloadData()
         }
     }
     

@@ -36,6 +36,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="38"/>
+                                </variation>
                                 <connections>
                                     <action selector="getStartedPressed:" destination="uCt-Tq-i7K" eventType="touchUpInside" id="VAp-NI-Z1C"/>
                                     <segue destination="0Rm-JR-ZXz" kind="presentation" modalPresentationStyle="fullScreen" id="I11-bV-VXf"/>
@@ -46,12 +49,18 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="39"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since this is your first time using the app, we'll guide you through setting up your preferences." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="LY4-dg-gdy">
                                 <rect key="frame" x="20" y="470" width="374" height="82.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                </variation>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o4B-QQ-sG0"/>
@@ -102,6 +111,9 @@
                                                 <state key="normal" title="Vegetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liU-Jm-BDw" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="17" width="374" height="43"/>
@@ -113,6 +125,9 @@
                                                 <state key="normal" title="Gluten Free">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aha-Gx-95H" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="497" width="374" height="43"/>
@@ -124,6 +139,9 @@
                                                 <state key="normal" title="Primal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-os-okR" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="437" width="374" height="43"/>
@@ -135,6 +153,9 @@
                                                 <state key="normal" title="Paleo">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh7-WB-e9i" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="377" width="374" height="43"/>
@@ -146,6 +167,9 @@
                                                 <state key="normal" title="Pescetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWW-A7-aUg" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="257" width="374" height="43"/>
@@ -157,6 +181,9 @@
                                                 <state key="normal" title="Ovo-Vegetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIr-Oz-myI" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="197" width="374" height="43"/>
@@ -168,6 +195,9 @@
                                                 <state key="normal" title="Lacto-Vegetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JK-vo-7rm" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="77" width="374" height="43"/>
@@ -179,6 +209,9 @@
                                                 <state key="normal" title="Ketogenic">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsE-73-9sZ" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="557" width="374" height="43"/>
@@ -190,6 +223,9 @@
                                                 <state key="normal" title="Whole30">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V36-IP-FLD" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="317" width="374" height="43"/>
@@ -201,6 +237,9 @@
                                                 <state key="normal" title="Vegan">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -341,6 +380,9 @@
                                                 <state key="normal" title="Dairy">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0u-44-dYa" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="77" width="374" height="43"/>
@@ -352,6 +394,9 @@
                                                 <state key="normal" title="Egg">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdE-NI-jIR" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="137" width="374" height="43"/>
@@ -363,6 +408,9 @@
                                                 <state key="normal" title="Gluten">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0M-Mj-7DZ" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="197" width="374" height="43"/>
@@ -374,6 +422,9 @@
                                                 <state key="normal" title="Grain">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-gI-8jf" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="257" width="374" height="43"/>
@@ -385,6 +436,9 @@
                                                 <state key="normal" title="Peanut">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifi-Y3-IDH" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="317" width="374" height="43"/>
@@ -396,6 +450,9 @@
                                                 <state key="normal" title="Seafood">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQf-Qd-t5I" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="377" width="374" height="43"/>
@@ -407,6 +464,9 @@
                                                 <state key="normal" title="Sesame">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7PX-vZ-qSb" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="437" width="374" height="43"/>
@@ -418,6 +478,9 @@
                                                 <state key="normal" title="Shellfish">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1f-Xe-hIE" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="497" width="374" height="43"/>
@@ -429,6 +492,9 @@
                                                 <state key="normal" title="Soy">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdb-ew-ZgR" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="557" width="374" height="43"/>
@@ -436,10 +502,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="43" id="BIU-VL-iqi"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Sulfite">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azI-hd-FEg" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="617" width="374" height="43"/>
@@ -447,10 +516,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="43" id="lhv-RM-D8c"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Tree Nut">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-qA-LFy" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="677" width="374" height="43"/>
@@ -458,10 +530,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="43" id="gzh-yE-59r"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Wheat">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -555,6 +630,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                </variation>
                                 <connections>
                                     <segue destination="Nbz-v4-5nC" kind="presentation" modalPresentationStyle="fullScreen" id="Wfj-eJ-ywh"/>
                                 </connections>
@@ -600,6 +678,9 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6B-FP-U9e">
                                                 <rect key="frame" x="254" y="0.0" width="120" height="39"/>
@@ -616,6 +697,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                </variation>
                                                 <connections>
                                                     <segue destination="fxr-Ml-o4N" kind="presentation" modalPresentationStyle="fullScreen" id="72j-BE-YfG"/>
                                                 </connections>
@@ -677,6 +761,9 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                                </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNi-Tn-Qpk">
                                                 <rect key="frame" x="254" y="0.0" width="120" height="39"/>
@@ -693,6 +780,9 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                </variation>
                                                 <connections>
                                                     <segue destination="HX0-yy-Bvn" kind="presentation" modalPresentationStyle="fullScreen" id="CR9-cP-7NG"/>
                                                 </connections>
@@ -741,6 +831,9 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" red="0.84313725490000002" green="0.14901960780000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                </variation>
                                 <connections>
                                     <action selector="resetButtonPressed:" destination="r9A-DD-Iuo" eventType="touchUpInside" id="9vy-oY-reN"/>
                                     <segue destination="uCt-Tq-i7K" kind="presentation" modalPresentationStyle="fullScreen" id="z0q-1R-vJB"/>
@@ -872,6 +965,9 @@
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
@@ -942,6 +1038,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                </variation>
                                 <connections>
                                     <action selector="cookButtonPressed:" destination="5Xj-69-Pi1" eventType="touchUpInside" id="NgS-cP-5mG"/>
                                 </connections>
@@ -984,6 +1083,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                         <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1003,6 +1105,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                         <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1031,6 +1136,9 @@
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                         <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                             </stackView>
@@ -1039,6 +1147,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yDA-Xc-BGV">
                                                 <rect key="frame" x="12" y="768.5" width="390" height="200"/>
@@ -1059,12 +1170,18 @@
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="egO-B6-tU8">
                                                                     <rect key="frame" x="257.5" y="11" width="72.5" height="28"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
@@ -1089,12 +1206,18 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Steps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4L-6k-OrJ">
                                                 <rect key="frame" x="50" y="968.5" width="97" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <tableView clipsSubviews="YES" tag="15" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-BZ-1Gk">
                                                 <rect key="frame" x="12" y="1012" width="390" height="350"/>
@@ -1121,12 +1244,18 @@
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                                             <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                                            </variation>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="instruction much lmao wow many instruction wowwwww" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKF-SD-PyU">
                                                                             <rect key="frame" x="10" y="51.5" width="310" height="48"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                            </variation>
                                                                         </label>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1175,12 +1304,18 @@
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.1 tsp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ab8-ou-4il">
                                                                     <rect key="frame" x="273" y="11" width="57" height="28"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
@@ -1354,6 +1489,9 @@
                                                 <state key="normal" title="Vegetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrF-Ty-9mG" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="17" width="374" height="43"/>
@@ -1365,6 +1503,9 @@
                                                 <state key="normal" title="Gluten Free">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7F-xE-j1M" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="497" width="374" height="43"/>
@@ -1376,6 +1517,9 @@
                                                 <state key="normal" title="Primal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78T-0c-aft" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="437" width="374" height="43"/>
@@ -1387,6 +1531,9 @@
                                                 <state key="normal" title="Paleo">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTi-bd-yMN" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="377" width="374" height="43"/>
@@ -1398,6 +1545,9 @@
                                                 <state key="normal" title="Pescetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coD-0J-tDf" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="257" width="374" height="43"/>
@@ -1409,6 +1559,9 @@
                                                 <state key="normal" title="Ovo-Vegetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VbH-LK-X5I" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="197" width="374" height="43"/>
@@ -1420,6 +1573,9 @@
                                                 <state key="normal" title="Lacto-Vegetarian">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xys-eJ-t9m" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="77" width="374" height="43"/>
@@ -1431,6 +1587,9 @@
                                                 <state key="normal" title="Ketogenic">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sn6-Vh-282" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="557" width="374" height="43"/>
@@ -1442,6 +1601,9 @@
                                                 <state key="normal" title="Whole30">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxK-JL-VQo" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="317" width="374" height="43"/>
@@ -1453,6 +1615,9 @@
                                                 <state key="normal" title="Vegan">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1514,12 +1679,18 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="39"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(you can choose more than one)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1aJ-EB-qg1">
                                         <rect key="frame" x="0.0" y="42" width="374" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -1542,6 +1713,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                </variation>
                                 <connections>
                                     <segue destination="WdJ-K9-BeX" kind="unwind" identifier="unwindDiets" unwindAction="backToPreferencesViewControllerWith:" id="8sr-Eb-Yhn"/>
                                 </connections>
@@ -1594,6 +1768,9 @@
                                                 <state key="normal" title="Dairy">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOV-zg-YPZ" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="77" width="374" height="43"/>
@@ -1605,6 +1782,9 @@
                                                 <state key="normal" title="Egg">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9l-xw-aD1" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="137" width="374" height="43"/>
@@ -1616,6 +1796,9 @@
                                                 <state key="normal" title="Gluten">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP0-g0-xEl" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="197" width="374" height="43"/>
@@ -1627,6 +1810,9 @@
                                                 <state key="normal" title="Grain">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkR-er-G01" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="257" width="374" height="43"/>
@@ -1638,6 +1824,9 @@
                                                 <state key="normal" title="Peanut">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyr-M5-yLi" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="317" width="374" height="43"/>
@@ -1649,6 +1838,9 @@
                                                 <state key="normal" title="Seafood">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="li5-Lc-9bz" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="377" width="374" height="43"/>
@@ -1660,6 +1852,9 @@
                                                 <state key="normal" title="Sesame">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ab4-OU-cpM" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="437" width="374" height="43"/>
@@ -1671,6 +1866,9 @@
                                                 <state key="normal" title="Shellfish">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfM-12-BXm" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="497" width="374" height="43"/>
@@ -1682,6 +1880,9 @@
                                                 <state key="normal" title="Soy">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bh-JZ-ZZt" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="557" width="374" height="43"/>
@@ -1693,6 +1894,9 @@
                                                 <state key="normal" title="Sulfite">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poE-TN-R2z" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="617" width="374" height="43"/>
@@ -1704,6 +1908,9 @@
                                                 <state key="normal" title="Tree Nut">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fq-KH-suY" customClass="UIPreferenceButton" customModule="Recipe_App" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="677" width="374" height="43"/>
@@ -1715,6 +1922,9 @@
                                                 <state key="normal" title="Wheat">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                </variation>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1784,12 +1994,18 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="33"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(you can choose more than one)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3r-tp-Nkj">
                                         <rect key="frame" x="52.5" y="90" width="269.5" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                             </stackView>
@@ -1808,6 +2024,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                </variation>
                                 <connections>
                                     <segue destination="wKk-a5-bDR" kind="unwind" identifier="unwindIntolerences" unwindAction="backToPreferencesViewControllerWith:" id="wXJ-RG-MkH"/>
                                 </connections>
@@ -1939,6 +2158,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                </variation>
                                 <connections>
                                     <action selector="cookButtonPressed:" destination="gVZ-Nu-9UK" eventType="touchUpInside" id="M1O-4e-r8I"/>
                                 </connections>
@@ -1954,6 +2176,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lZ7-TS-B45">
                                                 <rect key="frame" x="12" y="387" width="390" height="200"/>
@@ -1974,6 +2199,9 @@
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwR-aH-588">
                                                                     <rect key="frame" x="290" y="5" width="40" height="40"/>
@@ -2008,6 +2236,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="n9V-fm-D0x">
                                                 <rect key="frame" x="12" y="73.5" width="390" height="250"/>
@@ -2028,6 +2259,9 @@
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHN-mc-Zj0">
                                                                     <rect key="frame" x="290" y="10" width="40" height="40"/>
@@ -2044,6 +2278,9 @@
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                                    </variation>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
@@ -2126,7 +2363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJV-LG-dKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5370" y="-234"/>
+            <point key="canvasLocation" x="5381.1594202898559" y="-234.375"/>
         </scene>
         <!--Recipe Steps View Controller-->
         <scene sceneID="JQY-9t-88O">
@@ -2154,6 +2391,9 @@
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                            </variation>
                                                         </label>
                                                         <view contentMode="scaleToFill" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="wCd-Bl-kYh">
                                                             <rect key="frame" x="10" y="53.5" width="318" height="1"/>
@@ -2175,6 +2415,9 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                            </variation>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2216,7 +2459,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="vxN-GS-5Cd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -2225,6 +2468,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                </variation>
                                 <connections>
                                     <action selector="finishButtonPressed:" destination="TcM-ZQ-SqR" eventType="touchUpInside" id="5bF-B2-gra"/>
                                 </connections>
@@ -2263,6 +2509,314 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1W-dz-SX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6125" y="-234"/>
+        </scene>
+        <!--Finish Recipe View Controller-->
+        <scene sceneID="Wh7-bz-X4F">
+            <objects>
+                <viewController storyboardIdentifier="FinishRecipeViewController" id="MyL-ei-hzZ" customClass="FinishRecipeViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HJT-S1-4ki">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPA-mg-nq9">
+                                <rect key="frame" x="20" y="64" width="374" height="535.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eer-Hm-HtE">
+                                        <rect key="frame" x="20" y="145" width="334" height="160.5"/>
+                                    </imageView>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-3t-Lre">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="135"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="very very very very very very very long recipe nameeeeeeeeeeee" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzV-wV-CJH">
+                                                <rect key="frame" x="10" y="10" width="354" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="xzV-wV-CJH" secondAttribute="bottom" constant="10" id="UWH-8g-rd5"/>
+                                            <constraint firstAttribute="trailing" secondItem="xzV-wV-CJH" secondAttribute="trailing" constant="10" id="a7r-Py-KiO"/>
+                                            <constraint firstItem="xzV-wV-CJH" firstAttribute="top" secondItem="uW8-3t-Lre" secondAttribute="top" constant="10" id="lK5-3r-LmP"/>
+                                            <constraint firstItem="xzV-wV-CJH" firstAttribute="leading" secondItem="uW8-3t-Lre" secondAttribute="leading" constant="10" id="mJa-bK-Kqv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eI-Oe-hwV">
+                                        <rect key="frame" x="20" y="325.5" width="334" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHZ-LO-bsO">
+                                                <rect key="frame" x="15" y="8" width="75.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1.2345k kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJb-ms-YFf">
+                                                <rect key="frame" x="208.5" y="8" width="110.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="VJb-ms-YFf" secondAttribute="trailing" constant="15" id="B4f-Nb-sET"/>
+                                            <constraint firstItem="PHZ-LO-bsO" firstAttribute="top" secondItem="8eI-Oe-hwV" secondAttribute="top" constant="8" id="BZi-7t-WEv"/>
+                                            <constraint firstAttribute="height" constant="40" id="HmF-n1-uAB"/>
+                                            <constraint firstItem="PHZ-LO-bsO" firstAttribute="leading" secondItem="8eI-Oe-hwV" secondAttribute="leading" constant="15" id="Zvn-G8-xCn"/>
+                                            <constraint firstAttribute="bottom" secondItem="VJb-ms-YFf" secondAttribute="bottom" constant="8" id="cDJ-4x-Ypl"/>
+                                            <constraint firstItem="VJb-ms-YFf" firstAttribute="top" secondItem="8eI-Oe-hwV" secondAttribute="top" constant="8" id="gtb-oc-EMG"/>
+                                            <constraint firstAttribute="bottom" secondItem="PHZ-LO-bsO" secondAttribute="bottom" constant="8" id="mVU-JV-JKX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWI-6g-aRw">
+                                        <rect key="frame" x="20" y="375.5" width="334" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1O-K0-wCY">
+                                                <rect key="frame" x="15" y="8" width="39" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1.2345k kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQu-xX-jD4">
+                                                <rect key="frame" x="208.5" y="8" width="110.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="rQu-xX-jD4" firstAttribute="top" secondItem="uWI-6g-aRw" secondAttribute="top" constant="8" id="4ze-si-IYG"/>
+                                            <constraint firstAttribute="trailing" secondItem="rQu-xX-jD4" secondAttribute="trailing" constant="15" id="E5i-Cc-FYn"/>
+                                            <constraint firstItem="W1O-K0-wCY" firstAttribute="top" secondItem="uWI-6g-aRw" secondAttribute="top" constant="8" id="TIR-Ck-xcy"/>
+                                            <constraint firstItem="W1O-K0-wCY" firstAttribute="leading" secondItem="uWI-6g-aRw" secondAttribute="leading" constant="15" id="Y43-jq-JW1"/>
+                                            <constraint firstAttribute="bottom" secondItem="rQu-xX-jD4" secondAttribute="bottom" constant="8" id="h1R-mg-yhe"/>
+                                            <constraint firstAttribute="bottom" secondItem="W1O-K0-wCY" secondAttribute="bottom" constant="8" id="lKe-b0-3on"/>
+                                            <constraint firstAttribute="height" constant="40" id="nWA-7O-KY9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crj-aN-CNp">
+                                        <rect key="frame" x="20" y="425.5" width="334" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carbohydrates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8L-qH-57d">
+                                                <rect key="frame" x="15" y="8" width="136.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1.2345k kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg7-XW-1az">
+                                                <rect key="frame" x="208.5" y="8" width="110.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Tg7-XW-1az" firstAttribute="top" secondItem="crj-aN-CNp" secondAttribute="top" constant="8" id="SoC-Zh-BeH"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tg7-XW-1az" secondAttribute="trailing" constant="15" id="iqa-E6-i8x"/>
+                                            <constraint firstItem="N8L-qH-57d" firstAttribute="leading" secondItem="crj-aN-CNp" secondAttribute="leading" constant="15" id="qY6-GW-7eg"/>
+                                            <constraint firstAttribute="bottom" secondItem="N8L-qH-57d" secondAttribute="bottom" constant="8" id="quf-QB-qQd"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tg7-XW-1az" secondAttribute="bottom" constant="8" id="r88-F1-RP1"/>
+                                            <constraint firstItem="N8L-qH-57d" firstAttribute="top" secondItem="crj-aN-CNp" secondAttribute="top" constant="8" id="wCX-CP-2fy"/>
+                                            <constraint firstAttribute="height" constant="40" id="yZb-yk-jAi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-oh-Wmo">
+                                        <rect key="frame" x="20" y="475.5" width="334" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sg-Ij-SZ5">
+                                                <rect key="frame" x="15" y="8" width="66" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1.2345k kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0N-hb-hD5">
+                                                <rect key="frame" x="208.5" y="8" width="110.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3ly-1n-d2g"/>
+                                            <constraint firstItem="M0N-hb-hD5" firstAttribute="top" secondItem="aFo-oh-Wmo" secondAttribute="top" constant="8" id="GRg-9N-R7k"/>
+                                            <constraint firstAttribute="bottom" secondItem="M0N-hb-hD5" secondAttribute="bottom" constant="8" id="GTH-3Z-Ice"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Sg-Ij-SZ5" secondAttribute="bottom" constant="8" id="N2d-qT-gkq"/>
+                                            <constraint firstItem="8Sg-Ij-SZ5" firstAttribute="leading" secondItem="aFo-oh-Wmo" secondAttribute="leading" constant="15" id="VrD-Dp-FiF"/>
+                                            <constraint firstAttribute="trailing" secondItem="M0N-hb-hD5" secondAttribute="trailing" constant="15" id="Y9y-tm-QqY"/>
+                                            <constraint firstItem="8Sg-Ij-SZ5" firstAttribute="top" secondItem="aFo-oh-Wmo" secondAttribute="top" constant="8" id="rKe-8c-Tdr"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uWI-6g-aRw" firstAttribute="leading" secondItem="PPA-mg-nq9" secondAttribute="leading" constant="20" id="10T-mO-cfc"/>
+                                    <constraint firstAttribute="trailing" secondItem="uWI-6g-aRw" secondAttribute="trailing" constant="20" id="3N0-5k-ojf"/>
+                                    <constraint firstItem="Eer-Hm-HtE" firstAttribute="top" secondItem="uW8-3t-Lre" secondAttribute="bottom" constant="10" id="4Aj-bc-oMV"/>
+                                    <constraint firstAttribute="bottom" secondItem="aFo-oh-Wmo" secondAttribute="bottom" constant="20" id="6Of-Go-UZ6"/>
+                                    <constraint firstItem="crj-aN-CNp" firstAttribute="leading" secondItem="PPA-mg-nq9" secondAttribute="leading" constant="20" id="AIr-jc-m2C"/>
+                                    <constraint firstItem="8eI-Oe-hwV" firstAttribute="leading" secondItem="PPA-mg-nq9" secondAttribute="leading" constant="20" id="G1E-ZV-cvt"/>
+                                    <constraint firstItem="uW8-3t-Lre" firstAttribute="leading" secondItem="PPA-mg-nq9" secondAttribute="leading" id="IYh-C6-1lX"/>
+                                    <constraint firstItem="aFo-oh-Wmo" firstAttribute="leading" secondItem="PPA-mg-nq9" secondAttribute="leading" constant="20" id="OcI-WG-LHk"/>
+                                    <constraint firstAttribute="trailing" secondItem="uW8-3t-Lre" secondAttribute="trailing" id="RoR-QO-jZz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eer-Hm-HtE" secondAttribute="trailing" constant="20" id="T4B-sX-LYu"/>
+                                    <constraint firstItem="8eI-Oe-hwV" firstAttribute="top" secondItem="Eer-Hm-HtE" secondAttribute="bottom" constant="20" id="Uqu-fb-bZt"/>
+                                    <constraint firstAttribute="trailing" secondItem="crj-aN-CNp" secondAttribute="trailing" constant="20" id="YeK-GK-AoF"/>
+                                    <constraint firstItem="Eer-Hm-HtE" firstAttribute="height" secondItem="PPA-mg-nq9" secondAttribute="height" multiplier="0.3" id="a9x-lE-gNy"/>
+                                    <constraint firstItem="Eer-Hm-HtE" firstAttribute="leading" secondItem="PPA-mg-nq9" secondAttribute="leading" constant="20" id="ftG-LR-xWI"/>
+                                    <constraint firstItem="uW8-3t-Lre" firstAttribute="top" secondItem="PPA-mg-nq9" secondAttribute="top" id="hAp-NC-HR7"/>
+                                    <constraint firstItem="uWI-6g-aRw" firstAttribute="top" secondItem="8eI-Oe-hwV" secondAttribute="bottom" constant="10" id="n4p-4s-21b"/>
+                                    <constraint firstItem="crj-aN-CNp" firstAttribute="top" secondItem="uWI-6g-aRw" secondAttribute="bottom" constant="10" id="omX-MS-wnr"/>
+                                    <constraint firstAttribute="trailing" secondItem="aFo-oh-Wmo" secondAttribute="trailing" constant="20" id="qco-kZ-jIa"/>
+                                    <constraint firstItem="aFo-oh-Wmo" firstAttribute="top" secondItem="crj-aN-CNp" secondAttribute="bottom" constant="10" id="u4r-3d-1KT"/>
+                                    <constraint firstAttribute="trailing" secondItem="8eI-Oe-hwV" secondAttribute="trailing" constant="20" id="wez-5F-Z8x"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cui-bW-KEU">
+                                <rect key="frame" x="20" y="629.5" width="374" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add recipe nutrition to HealthKit?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="is2-2p-V4Y">
+                                        <rect key="frame" x="30" y="20" width="314" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Zto-uw-fD8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgS-Tx-8zn">
+                                        <rect key="frame" x="0.0" y="72" width="187" height="58"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                        <state key="normal" title="Yes">
+                                            <color key="titleColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="yesButtonPressed:" destination="MyL-ei-hzZ" eventType="touchUpInside" id="buA-vL-Oqu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-XY-ol1">
+                                        <rect key="frame" x="187" y="72" width="187" height="58"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                        <state key="normal" title="No">
+                                            <color key="titleColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        </variation>
+                                        <connections>
+                                            <segue destination="o2a-eB-jM0" kind="unwind" identifier="closeOutOfFinish" unwindAction="backToStepsViewControllerWith:" id="WKE-dE-VQp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Hih-XY-ol1" secondAttribute="bottom" id="98u-VK-hCL"/>
+                                    <constraint firstItem="LgS-Tx-8zn" firstAttribute="width" secondItem="cui-bW-KEU" secondAttribute="width" multiplier="0.5" id="9sZ-0R-28P"/>
+                                    <constraint firstItem="Hih-XY-ol1" firstAttribute="top" secondItem="is2-2p-V4Y" secondAttribute="bottom" constant="20" id="ACX-s7-adm"/>
+                                    <constraint firstItem="is2-2p-V4Y" firstAttribute="top" secondItem="cui-bW-KEU" secondAttribute="top" constant="20" id="IcW-R1-OIX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hih-XY-ol1" secondAttribute="trailing" id="K7O-Fx-Z0u"/>
+                                    <constraint firstItem="Hih-XY-ol1" firstAttribute="leading" secondItem="LgS-Tx-8zn" secondAttribute="trailing" id="N3n-WP-dxL"/>
+                                    <constraint firstItem="LgS-Tx-8zn" firstAttribute="top" secondItem="is2-2p-V4Y" secondAttribute="bottom" constant="20" id="UuB-oi-XuN"/>
+                                    <constraint firstAttribute="trailing" secondItem="is2-2p-V4Y" secondAttribute="trailing" constant="30" id="Wja-4Z-Yr6"/>
+                                    <constraint firstAttribute="bottom" secondItem="LgS-Tx-8zn" secondAttribute="bottom" id="ZCS-Sk-2Zo"/>
+                                    <constraint firstItem="is2-2p-V4Y" firstAttribute="leading" secondItem="cui-bW-KEU" secondAttribute="leading" constant="30" id="cNR-48-Maf"/>
+                                    <constraint firstItem="LgS-Tx-8zn" firstAttribute="leading" secondItem="cui-bW-KEU" secondAttribute="leading" id="lKS-gR-pgk"/>
+                                    <constraint firstItem="Hih-XY-ol1" firstAttribute="leading" secondItem="LgS-Tx-8zn" secondAttribute="trailing" id="oMK-5q-LkL"/>
+                                    <constraint firstItem="Hih-XY-ol1" firstAttribute="width" secondItem="cui-bW-KEU" secondAttribute="width" multiplier="0.5" id="oZg-8a-TaF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uLY-oi-GJ7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PPA-mg-nq9" firstAttribute="leading" secondItem="uLY-oi-GJ7" secondAttribute="leading" constant="20" id="7Nq-Zq-P4F"/>
+                            <constraint firstItem="cui-bW-KEU" firstAttribute="leading" secondItem="uLY-oi-GJ7" secondAttribute="leading" constant="20" id="DQz-tq-LJb"/>
+                            <constraint firstItem="cui-bW-KEU" firstAttribute="top" secondItem="PPA-mg-nq9" secondAttribute="bottom" constant="30" id="ekU-CI-IOe"/>
+                            <constraint firstItem="PPA-mg-nq9" firstAttribute="top" secondItem="uLY-oi-GJ7" secondAttribute="top" constant="20" id="hNf-M6-UIF"/>
+                            <constraint firstItem="uLY-oi-GJ7" firstAttribute="trailing" secondItem="PPA-mg-nq9" secondAttribute="trailing" constant="20" id="hnA-r2-WBR"/>
+                            <constraint firstItem="uLY-oi-GJ7" firstAttribute="trailing" secondItem="cui-bW-KEU" secondAttribute="trailing" constant="20" id="n24-tE-nyz"/>
+                            <constraint firstItem="PPA-mg-nq9" firstAttribute="height" secondItem="uLY-oi-GJ7" secondAttribute="height" multiplier="0.654645" id="n6e-5Z-VKv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aco-ha-jp8"/>
+                    <connections>
+                        <outlet property="caloriesLabel" destination="VJb-ms-YFf" id="R9j-6J-GJf"/>
+                        <outlet property="carbsLabel" destination="Tg7-XW-1az" id="8f6-gq-VKs"/>
+                        <outlet property="cardView" destination="PPA-mg-nq9" id="Z2D-aK-msG"/>
+                        <outlet property="fatsLabel" destination="rQu-xX-jD4" id="jP1-sJ-1C6"/>
+                        <outlet property="proteinLabel" destination="M0N-hb-hD5" id="heO-Qv-9nK"/>
+                        <outlet property="recipeImage" destination="Eer-Hm-HtE" id="Wal-JF-OCf"/>
+                        <outlet property="recipeLabel" destination="xzV-wV-CJH" id="Yev-Qv-Bxj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDk-65-zTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="o2a-eB-jM0" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="6841" y="437"/>
         </scene>
         <!--Preferences-->
         <scene sceneID="pab-2E-qYU">
@@ -2309,12 +2863,18 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Instructions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eo-p7-OtZ">
                                                 <rect key="frame" x="50" y="30" width="217" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="gYk-y9-3uB">
                                                 <rect key="frame" x="12" y="475" width="390" height="200"/>
@@ -2335,6 +2895,9 @@
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9H-JP-gUD">
                                                                     <rect key="frame" x="290" y="5" width="40" height="40"/>
@@ -2372,12 +2935,18 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOj-T5-mnx">
                                                 <rect key="frame" x="50" y="695" width="73" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                                </variation>
                                             </label>
                                             <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="s9Q-vT-6Tq">
                                                 <rect key="frame" x="12" y="161.5" width="390" height="250"/>
@@ -2398,6 +2967,9 @@
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpH-aZ-h3B">
                                                                     <rect key="frame" x="290" y="10" width="40" height="40"/>
@@ -2432,9 +3004,12 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p50-cb-uJP">
-                                                <rect key="frame" x="194" y="783" width="80" height="40"/>
+                                                <rect key="frame" x="191" y="783" width="80" height="40"/>
                                                 <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="3Ic-1f-HK6"/>
@@ -2449,19 +3024,25 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="pauseButtonPressed:" destination="3Nh-Mq-1qK" eventType="touchUpInside" id="bZv-LA-5su"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-2f-l3r">
-                                                <rect key="frame" x="314" y="783" width="50" height="40"/>
+                                                <rect key="frame" x="311" y="783" width="53" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="bqD-pz-03s"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="Reset">
                                                     <color key="titleColor" systemColor="systemRedColor"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="resetButtonPressed:" destination="3Nh-Mq-1qK" eventType="touchUpInside" id="woc-xN-PxJ"/>
                                                 </connections>
@@ -2471,9 +3052,12 @@
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                                </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9F-d9-Sej">
-                                                <rect key="frame" x="50" y="783" width="100" height="40"/>
+                                                <rect key="frame" x="50" y="783" width="97" height="40"/>
                                                 <color key="backgroundColor" red="0.96078431369999995" green="0.54117647059999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="3pe-it-VtC"/>
@@ -2488,6 +3072,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="startButtonPressed:" destination="3Nh-Mq-1qK" eventType="touchUpInside" id="09l-KI-DQg"/>
                                                 </connections>
@@ -2576,195 +3163,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcs-SL-5hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6840.579710144928" y="-234.375"/>
-        </scene>
-        <!--Finish Recipe View Controller-->
-        <scene sceneID="ZpW-Db-WGN">
-            <objects>
-                <viewController storyboardIdentifier="FinishRecipeViewController" id="4v9-re-49I" customClass="FinishRecipeViewController" customModule="Recipe_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zy1-gJ-0u0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBE-jo-Tgc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="666"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkN-0T-QsH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="684"/>
-                                        <subviews>
-                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="mVw-5m-6dW">
-                                                <rect key="frame" x="0.0" y="464" width="414" height="200"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="eg7-p8-6jl"/>
-                                                </constraints>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nutritionCell" id="gGs-C6-6fu" customClass="OverviewNutritionTableViewCell" customModule="Recipe_App" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="55.5" width="374" height="50"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gGs-C6-6fu" id="lwg-kD-Zvo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="uMj-HK-Ef9">
-                                                                    <rect key="frame" x="20" y="11" width="72" height="28"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 kcal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="0i0-5r-Khh">
-                                                                    <rect key="frame" x="281.5" y="11" width="72.5" height="28"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="0i0-5r-Khh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uMj-HK-Ef9" secondAttribute="trailing" constant="10" id="ESN-zb-NjE"/>
-                                                                <constraint firstItem="uMj-HK-Ef9" firstAttribute="leading" secondItem="lwg-kD-Zvo" secondAttribute="leadingMargin" id="F0d-S9-N4Q"/>
-                                                                <constraint firstAttribute="bottomMargin" secondItem="uMj-HK-Ef9" secondAttribute="bottom" id="atT-uX-Kij"/>
-                                                                <constraint firstItem="uMj-HK-Ef9" firstAttribute="top" secondItem="lwg-kD-Zvo" secondAttribute="topMargin" id="d1C-5o-kj0"/>
-                                                                <constraint firstItem="0i0-5r-Khh" firstAttribute="trailing" secondItem="lwg-kD-Zvo" secondAttribute="trailingMargin" id="gWz-iv-D0I"/>
-                                                                <constraint firstAttribute="bottomMargin" secondItem="0i0-5r-Khh" secondAttribute="bottom" id="kD2-aN-PzR"/>
-                                                                <constraint firstItem="0i0-5r-Khh" firstAttribute="top" secondItem="lwg-kD-Zvo" secondAttribute="topMargin" id="pqB-tX-zJk"/>
-                                                            </constraints>
-                                                        </tableViewCellContentView>
-                                                        <connections>
-                                                            <outlet property="nutritionNameLabel" destination="uMj-HK-Ef9" id="aIf-k9-KsV"/>
-                                                            <outlet property="nutritionUnitLabel" destination="0i0-5r-Khh" id="Xg1-0J-lPJ"/>
-                                                        </connections>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                            </tableView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="very very very very very very very long recipe nameeeeeeeeeeee" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkh-rK-y4C">
-                                                <rect key="frame" x="20" y="20" width="374" height="122"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lZF-9t-ChW">
-                                                <rect key="frame" x="0.0" y="150" width="414" height="306"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="lZF-9t-ChW" secondAttribute="height" multiplier="157:116" id="p3i-D8-1GQ"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="lZF-9t-ChW" firstAttribute="leading" secondItem="LkN-0T-QsH" secondAttribute="leading" id="27F-Mr-Obd"/>
-                                            <constraint firstAttribute="trailing" secondItem="mVw-5m-6dW" secondAttribute="trailing" id="3g8-1C-kUh"/>
-                                            <constraint firstAttribute="bottom" secondItem="mVw-5m-6dW" secondAttribute="bottom" constant="20" id="KYl-dy-ZfF"/>
-                                            <constraint firstItem="Hkh-rK-y4C" firstAttribute="top" secondItem="LkN-0T-QsH" secondAttribute="top" constant="20" id="L3c-b6-L88"/>
-                                            <constraint firstItem="mVw-5m-6dW" firstAttribute="top" secondItem="lZF-9t-ChW" secondAttribute="bottom" constant="8" symbolic="YES" id="RS6-lG-h9T"/>
-                                            <constraint firstAttribute="trailing" secondItem="lZF-9t-ChW" secondAttribute="trailing" id="XDa-BP-EcV"/>
-                                            <constraint firstItem="mVw-5m-6dW" firstAttribute="leading" secondItem="LkN-0T-QsH" secondAttribute="leading" id="koI-Fg-STe"/>
-                                            <constraint firstItem="lZF-9t-ChW" firstAttribute="top" secondItem="Hkh-rK-y4C" secondAttribute="bottom" constant="8" symbolic="YES" id="tlc-4e-Vtj"/>
-                                            <constraint firstAttribute="trailing" secondItem="Hkh-rK-y4C" secondAttribute="trailing" constant="20" id="tuU-SL-DnO"/>
-                                            <constraint firstItem="Hkh-rK-y4C" firstAttribute="leading" secondItem="LkN-0T-QsH" secondAttribute="leading" constant="20" id="xjF-j0-DVo"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="LkN-0T-QsH" firstAttribute="width" secondItem="nZw-Y1-nDw" secondAttribute="width" id="4Q1-W8-1zI"/>
-                                    <constraint firstItem="LkN-0T-QsH" firstAttribute="trailing" secondItem="s4D-YV-8af" secondAttribute="trailing" id="4sF-nj-8pN"/>
-                                    <constraint firstItem="LkN-0T-QsH" firstAttribute="top" secondItem="qBE-jo-Tgc" secondAttribute="top" id="Dha-LR-DUV"/>
-                                    <constraint firstItem="LkN-0T-QsH" firstAttribute="bottom" secondItem="s4D-YV-8af" secondAttribute="bottom" id="GKp-y6-wMr"/>
-                                    <constraint firstItem="LkN-0T-QsH" firstAttribute="top" secondItem="s4D-YV-8af" secondAttribute="top" id="GZO-qx-iHN"/>
-                                    <constraint firstAttribute="trailing" secondItem="LkN-0T-QsH" secondAttribute="trailing" id="cDH-Xo-k9a"/>
-                                    <constraint firstAttribute="bottom" secondItem="LkN-0T-QsH" secondAttribute="bottom" id="fwb-WJ-Y40"/>
-                                    <constraint firstItem="LkN-0T-QsH" firstAttribute="leading" secondItem="s4D-YV-8af" secondAttribute="leading" id="mir-vc-bb9"/>
-                                    <constraint firstItem="LkN-0T-QsH" firstAttribute="leading" secondItem="qBE-jo-Tgc" secondAttribute="leading" id="pJN-FN-qex"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="s4D-YV-8af"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="nZw-Y1-nDw"/>
-                            </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gl-cc-AsL">
-                                <rect key="frame" x="20" y="730" width="374" height="112"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add recipe nutrition to HealthKit?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="8jK-k7-XeU">
-                                        <rect key="frame" x="30" y="0.0" width="314" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="UD3-dk-CLO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yK0-Fl-ejI">
-                                        <rect key="frame" x="0.0" y="52" width="187" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="cB8-Go-NkV"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
-                                        <state key="normal" title="Yes">
-                                            <color key="titleColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="yesButtonPressed:" destination="4v9-re-49I" eventType="touchUpInside" id="0j7-aK-kQh"/>
-                                            <segue destination="kZW-Yi-bq9" kind="unwind" identifier="closeOutOfFinish" unwindAction="backToStepsViewControllerWith:" id="ey5-Jb-G0w"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uib-aR-gAe">
-                                        <rect key="frame" x="187" y="52" width="187" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="gRU-3g-Cdn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
-                                        <state key="normal" title="No">
-                                            <color key="titleColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="kZW-Yi-bq9" kind="unwind" identifier="closeOutOfFinish" unwindAction="backToStepsViewControllerWith:" id="gUw-IF-p0j"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="uib-aR-gAe" secondAttribute="trailing" id="1PT-5c-Nu7"/>
-                                    <constraint firstAttribute="bottom" secondItem="uib-aR-gAe" secondAttribute="bottom" id="5XT-Uj-oAb"/>
-                                    <constraint firstItem="uib-aR-gAe" firstAttribute="leading" secondItem="yK0-Fl-ejI" secondAttribute="trailing" id="6SV-yl-Pw0"/>
-                                    <constraint firstItem="uib-aR-gAe" firstAttribute="width" secondItem="8Gl-cc-AsL" secondAttribute="width" multiplier="0.5" id="6V3-73-qE8"/>
-                                    <constraint firstItem="8jK-k7-XeU" firstAttribute="leading" secondItem="8Gl-cc-AsL" secondAttribute="leading" constant="30" id="90v-pL-pcm"/>
-                                    <constraint firstItem="8jK-k7-XeU" firstAttribute="top" secondItem="8Gl-cc-AsL" secondAttribute="top" id="9lI-ti-wxG"/>
-                                    <constraint firstAttribute="bottom" secondItem="yK0-Fl-ejI" secondAttribute="bottom" id="E47-O0-thk"/>
-                                    <constraint firstItem="uib-aR-gAe" firstAttribute="top" secondItem="8jK-k7-XeU" secondAttribute="bottom" constant="20" id="OFP-G3-xgw"/>
-                                    <constraint firstAttribute="trailing" secondItem="8jK-k7-XeU" secondAttribute="trailing" constant="30" id="SYm-Gd-kw0"/>
-                                    <constraint firstItem="yK0-Fl-ejI" firstAttribute="leading" secondItem="8Gl-cc-AsL" secondAttribute="leading" id="YXQ-BW-Ypl"/>
-                                    <constraint firstItem="yK0-Fl-ejI" firstAttribute="width" secondItem="8Gl-cc-AsL" secondAttribute="width" multiplier="0.5" id="ZYw-aM-Gjc"/>
-                                    <constraint firstItem="yK0-Fl-ejI" firstAttribute="top" secondItem="8jK-k7-XeU" secondAttribute="bottom" constant="20" id="g7V-nQ-13w"/>
-                                    <constraint firstItem="uib-aR-gAe" firstAttribute="leading" secondItem="yK0-Fl-ejI" secondAttribute="trailing" id="yDn-Fi-BcE"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="fob-jy-XRw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="fob-jy-XRw" firstAttribute="trailing" secondItem="qBE-jo-Tgc" secondAttribute="trailing" id="0GG-Rn-uGw"/>
-                            <constraint firstItem="qBE-jo-Tgc" firstAttribute="leading" secondItem="fob-jy-XRw" secondAttribute="leading" id="Icp-PA-PtT"/>
-                            <constraint firstItem="fob-jy-XRw" firstAttribute="bottom" secondItem="8Gl-cc-AsL" secondAttribute="bottom" constant="20" id="Jdd-hH-6YH"/>
-                            <constraint firstItem="8Gl-cc-AsL" firstAttribute="top" secondItem="qBE-jo-Tgc" secondAttribute="bottom" constant="20" id="SPf-TZ-j3B"/>
-                            <constraint firstItem="qBE-jo-Tgc" firstAttribute="top" secondItem="fob-jy-XRw" secondAttribute="top" id="gh5-vI-gTU"/>
-                            <constraint firstItem="8Gl-cc-AsL" firstAttribute="leading" secondItem="fob-jy-XRw" secondAttribute="leading" constant="20" id="tLp-XJ-rOZ"/>
-                            <constraint firstItem="fob-jy-XRw" firstAttribute="trailing" secondItem="8Gl-cc-AsL" secondAttribute="trailing" constant="20" id="vuV-pl-CWu"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="x4k-Dl-bCA"/>
-                    <connections>
-                        <outlet property="nutritionTableView" destination="mVw-5m-6dW" id="KQq-uV-RXq"/>
-                        <outlet property="recipeImage" destination="lZF-9t-ChW" id="JKH-oa-3mr"/>
-                        <outlet property="recipeLabel" destination="Hkh-rK-y4C" id="ZUG-Gz-pPS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K9b-u8-iaD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="kZW-Yi-bq9" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="6841" y="437"/>
         </scene>
     </scenes>
     <resources>

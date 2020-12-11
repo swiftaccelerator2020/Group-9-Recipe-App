@@ -110,7 +110,7 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
         // #warning Incomplete implementation, return the number of items
         if let recipes = recipes {
             if recipes.count == 0 {
-                self.recipeCollectionView.setEmptyMessage("No results found")
+                self.recipeCollectionView.setEmptyMessage("No results found. Try searching something.")
             } else {
                 self.recipeCollectionView.restore()
             }
@@ -199,6 +199,19 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
                                 if let index = self.recipes!.firstIndex(of: recipe) {
                                     self.recipes!.remove(at: index)
                                 }
+                            } else {
+                                if let steps = analyzedInstructions[0].steps {
+                                    for step in steps {
+                                        if let instructions = step.step {
+                                            let words = instructions.lowercased().split(separator: " ")
+                                            if words.contains("subscribe") || words.contains("email") {
+                                                if let index = self.recipes!.firstIndex(of: recipe) {
+                                                    self.recipes!.remove(at: index)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -231,9 +244,19 @@ func getURL(query: String?) -> String {
     }
     var urlString: String?
     if query != nil {
-        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&query=\(query!.replacingOccurrences(of: " ", with: "%20"))&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&query=\(query!.replacingOccurrences(of: " ", with: "%20"))&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=20"
     } else {
-        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=12"
+        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=20"
+        let hour = Calendar.current.component(.hour, from: Date())
+        if hour > 5 && hour < 12 {
+            urlString! += "&type=breakfast,bread,"
+        } else if hour > 11 && hour < 17 {
+            urlString! += "&type=main course,appetizer".replacingOccurrences(of: " ", with: "%20")
+        } else if hour > 16 && hour < 24 {
+            urlString! += "&type=salad,side dish,dessert".replacingOccurrences(of: " ", with: "%20")
+        } else if hour > 0 && hour < 6 {
+            urlString! += "&type=snack,fingerfood"
+        }
     }
     
     

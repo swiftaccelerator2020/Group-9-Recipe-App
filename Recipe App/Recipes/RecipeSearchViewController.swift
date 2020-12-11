@@ -175,6 +175,19 @@ class RecipeSearchViewController: UIViewController, UICollectionViewDelegate, UI
                                 if let index = self.recipes!.firstIndex(of: recipe) {
                                     self.recipes!.remove(at: index)
                                 }
+                            } else {
+                                if let steps = analyzedInstructions[0].steps {
+                                    for step in steps {
+                                        if let instructions = step.step {
+                                            let words = instructions.lowercased().split(separator: " ")
+                                            if words.contains("subscribe") || words.contains("email") {
+                                                if let index = self.recipes!.firstIndex(of: recipe) {
+                                                    self.recipes!.remove(at: index)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

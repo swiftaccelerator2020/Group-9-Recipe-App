@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import UserNotifications
 
 class RecipeStepDetailsViewController: UIViewController, UNUserNotificationCenterDelegate {
     
@@ -189,14 +190,14 @@ class RecipeStepDetailsViewController: UIViewController, UNUserNotificationCente
                     content.title = "Time's Up!"
                     content.body = "You can proceed to the next step."
                     content.sound = .defaultCritical
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(1), repeats: false)
                     let request = UNNotificationRequest(identifier: "timesUp", content: content, trigger: trigger)
                     self.center.add(request, withCompletionHandler: nil)
                 } else {
                     let content = UNMutableNotificationContent()
                     content.title = "Time's Up!"
                     content.body = "You can proceed to the next step."
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(1), repeats: false)
                     let request = UNNotificationRequest(identifier: "timesUp", content: content, trigger: trigger)
                     self.center.add(request, withCompletionHandler: nil)
                 }

@@ -15,7 +15,6 @@ class StepsTableViewCell: UITableViewCell {
     //@IBOutlet weak var checkmarkButton: UIButton!
     @IBOutlet weak var instructionsLabel: UILabel!
     
-    var stepIndex: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +25,21 @@ class StepsTableViewCell: UITableViewCell {
         cellView.layer.cornerRadius = 15
         cellView.clipsToBounds = false
         cellView.backgroundColor = blue
+    }
+    
+    func update(steps: [RecipeSteps]?) {
+        var index: Int = Int(self.stepLabel.text!.replacingOccurrences(of: "Step ", with: ""))!
+        index -= 1
+        if let steps = steps {
+            let step = steps[index]
+            if let length = step.length {
+                if let number = length.number {
+                    self.timerImage.tintColor = .white
+                }
+            } else {
+                self.timerImage.tintColor = blue
+            }
+        }
     }
 }
 
@@ -92,17 +106,15 @@ extension RecipeStepsViewController: UITableViewDelegate, UITableViewDataSource 
             if let recipes = recipes, let analyzedInstructions = recipes.analyzedInstructions, let steps = analyzedInstructions[0].steps {
                 let step = steps[indexPath.row]
                 let cell = stepsTableView.dequeueReusableCell(withIdentifier: "stepsCell") as! StepsTableViewCell
-                cell.stepIndex = indexPath.row
                 cell.stepLabel.text = "Step \(indexPath.row + 1)"
-                if let _ = step.length {
-                    cell.timerImage.tintColor = .white
-                }
+
                 if let instructions = step.step {
                     cell.instructionsLabel.text = instructions.replacingOccurrences(of: ".", with: ". ").replacingOccurrences(of: "!", with: "! ").replacingOccurrences(of: ",", with: ", ").replacingOccurrences(of: "[\\s\n]+", with: " ", options: .regularExpression, range: nil)
                 }
 //                cell.checkmarkButton.tag = indexPath.row
 //                cell.checkmarkButton.isSelected = stepsChecklist[indexPath.row]
 //                cell.checkmarkButton.addTarget(self, action: #selector(checkboxTapped(_:)), for: .touchUpInside)
+                cell.update(steps: steps)
                 return cell
             }
             return StepsTableViewCell()

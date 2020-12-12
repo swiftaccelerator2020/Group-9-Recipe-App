@@ -18,7 +18,7 @@ struct RecipesInfo: Decodable, Equatable {
     let aggregateLikes: Int?
     let sourceName: String?
     let sourceUrl: String?
-    let summary: String?
+    let healthScore: Int?
     let cuisines: [String]?
     let dishTypes: [String]?
     let diets: [String]?
@@ -54,7 +54,7 @@ struct RecipesInfo: Decodable, Equatable {
     }
 
     static func ==(lhs: RecipesInfo, rhs: RecipesInfo) -> Bool {
-        return lhs.title == rhs.title && lhs.image == rhs.image && lhs.id == rhs.id && lhs.readyInMinutes == rhs.readyInMinutes && lhs.servings == rhs.servings && lhs.aggregateLikes == rhs.aggregateLikes && lhs.sourceName == rhs.sourceName && lhs.sourceUrl == rhs.sourceUrl && lhs.summary == rhs.summary && lhs.cuisines == rhs.cuisines && lhs.dishTypes == rhs.dishTypes && lhs.diets == rhs.diets && lhs.nutrition == rhs.nutrition && lhs.analyzedInstructions == rhs.analyzedInstructions && lhs.caloriesCarbFatsProteins == rhs.caloriesCarbFatsProteins && lhs.equipments == rhs.equipments
+        return lhs.title == rhs.title && lhs.image == rhs.image && lhs.id == rhs.id && lhs.readyInMinutes == rhs.readyInMinutes && lhs.servings == rhs.servings && lhs.aggregateLikes == rhs.aggregateLikes && lhs.sourceName == rhs.sourceName && lhs.sourceUrl == rhs.sourceUrl && lhs.healthScore == rhs.healthScore && lhs.cuisines == rhs.cuisines && lhs.dishTypes == rhs.dishTypes && lhs.diets == rhs.diets && lhs.nutrition == rhs.nutrition && lhs.analyzedInstructions == rhs.analyzedInstructions && lhs.caloriesCarbFatsProteins == rhs.caloriesCarbFatsProteins && lhs.equipments == rhs.equipments
     }
 }
 

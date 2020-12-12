@@ -28,6 +28,7 @@
 		488FF55A257B358A00FAFEAF /* RecipeStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FF559257B358900FAFEAF /* RecipeStepsViewController.swift */; };
 		488FF560257BC83000FAFEAF /* FinishRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488FF55F257BC83000FAFEAF /* FinishRecipeViewController.swift */; };
 		488FF565257BC86000FAFEAF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488FF564257BC86000FAFEAF /* HealthKit.framework */; };
+		48F7B5562584D5B0003AC9F5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 48F7B5552584D5B0003AC9F5 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		488FF55F257BC83000FAFEAF /* FinishRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRecipeViewController.swift; sourceTree = "<group>"; };
 		488FF562257BC85F00FAFEAF /* Recipe App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recipe App.entitlements"; sourceTree = "<group>"; };
 		488FF564257BC86000FAFEAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		48F7B5552584D5B0003AC9F5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		45445D86256E326200FCD807 = {
 			isa = PBXGroup;
 			children = (
+				48F7B5552584D5B0003AC9F5 /* .gitignore */,
 				45445D91256E326300FCD807 /* Recipe App */,
 				45445D90256E326300FCD807 /* Products */,
 				488FF563257BC86000FAFEAF /* Frameworks */,
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F7B5562584D5B0003AC9F5 /* .gitignore in Resources */,
 				45666B582582316A0095ABEF /* timer.mp3 in Resources */,
 				45445D9F256E326E00FCD807 /* LaunchScreen.storyboard in Resources */,
 				45445D9C256E326E00FCD807 /* Assets.xcassets in Resources */,

@@ -59,10 +59,18 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var servingsLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var creditsLabel: UILabel!
     
     @IBOutlet weak var ingredientsTableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var nutritionTableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var stepsTableViewHeightConstraint: NSLayoutConstraint!
+    
+    
+    @IBOutlet weak var healthScoreWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var healthScoreView: UIView!
+    @IBOutlet weak var healthScoreViewBounds: UIView!
+    @IBOutlet weak var healthScoreLabel: UILabel!
+    @IBOutlet weak var healthScoreText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +85,20 @@ class RecipeDetailsViewController: UIViewController {
             }
         }
         
+        for healthScore in [healthScoreView, healthScoreViewBounds] {
+            healthScore!.layer.cornerRadius = 12
+        }
+        
         if let recipes = recipes {
+            if let sourceURL = recipes.sourceUrl {
+                self.creditsLabel.text = "Recipe © \(URL(string: sourceURL)?.host ?? "www.spoonacular.com")"
+            }
+            if let healthScore = recipes.healthScore {
+                let width = CGFloat(CGFloat(healthScore)/100)*(healthScoreViewBounds.bounds.width)
+                healthScoreWidthConstraint.constant = width
+                healthScoreLabel.text = "\(healthScore)"
+                
+            }
             if let title = recipes.title {
                 self.title = title.capitalized
             }

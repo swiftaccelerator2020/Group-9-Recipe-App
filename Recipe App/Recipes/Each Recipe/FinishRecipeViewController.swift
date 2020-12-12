@@ -37,7 +37,7 @@ class FinishRecipeViewController: UIViewController {
         
         if let recipes = recipes {
             if let title = recipes.title {
-                recipeLabel.text = title
+                recipeLabel.text = title.capitalized
             }
             if let image = recipes.image {
                 recipeImage.downloaded(from: image)

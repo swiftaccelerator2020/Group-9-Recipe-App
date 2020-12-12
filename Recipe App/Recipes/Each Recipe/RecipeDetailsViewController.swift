@@ -79,7 +79,7 @@ class RecipeDetailsViewController: UIViewController {
         
         if let recipes = recipes {
             if let title = recipes.title {
-                self.title = title
+                self.title = title.capitalized
             }
             if let image = recipes.image {
                 self.recipeImageView.downloaded(from: image)
@@ -88,11 +88,7 @@ class RecipeDetailsViewController: UIViewController {
                 self.likesLabel.text = formatLikesNumber(likes)
             }
             if let time = recipes.readyInMinutes {
-                if time == 1 {
-                    self.timeLabel.text = "\(time) min"
-                } else {
-                    self.timeLabel.text = "\(time) mins"
-                }
+                self.timeLabel.text = timeString(time: TimeInterval(time))
             }
             if let servings = recipes.servings {
                 if servings == 1 {
@@ -151,6 +147,20 @@ class RecipeDetailsViewController: UIViewController {
 
         default:
             return "\(sign)\(n)"
+        }
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let hours = Int(time) / 60 % 60
+        let minutes = Int(time) % 60
+        if hours > 0 && minutes > 0 {
+            return String(format:"%i hr %i mins", hours, minutes)
+        } else if hours > 0 && minutes == 0 {
+            return String(format:"%i hr", hours)
+        } else if hours == 0 && minutes > 0 {
+            return String(format:"%i mins", minutes)
+        } else {
+            return String(format:"%i mins", minutes)
         }
     }
     

@@ -126,7 +126,7 @@ class RecipeViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         // Configure the cell
         cell.recipeLabel.textColor = blue
-        cell.recipeLabel.text = recipes?[indexPath.row].title
+        cell.recipeLabel.text = recipes?[indexPath.row].title?.capitalized
         cell.recipeImageView.downloaded(from: (recipes?[indexPath.row].image ?? "https://i.stack.imgur.com/Vkq2a.png"))
         
         return cell

@@ -246,7 +246,7 @@ func getURL(query: String?) -> String {
     if query != nil {
         urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&query=\(query!.replacingOccurrences(of: " ", with: "%20"))&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=20"
     } else {
-        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&addRecipeNutrition=true&sort=popularity&limitLicense=true&number=20"
+        urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey!)&addRecipeNutrition=true&limitLicense=true&number=20"
         let hour = Calendar.current.component(.hour, from: Date())
         if hour > 5 && hour < 12 {
             urlString! += "&type=breakfast,bread,"
@@ -257,6 +257,9 @@ func getURL(query: String?) -> String {
         } else if hour > 0 && hour < 6 {
             urlString! += "&type=snack,fingerfood"
         }
+        
+        let sortingOptions = ["", "meta-score", "popularity", "healthiness", "random"]
+        urlString! += "&sort=\(sortingOptions.randomElement() ?? "popularity")"
     }
     
     

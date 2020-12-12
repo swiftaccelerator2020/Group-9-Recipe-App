@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>We require access to HealthKit to store the nutrition of the recipes you just made</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>We require access to HealthKit to store the nutrition of the recipes you just made</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -41,6 +45,10 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -57,9 +65,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSHealthUpdateUsageDescription</key>
-	<string>We require access to HealthKit to store the nutrition of the recipes you just made</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string>We require access to HealthKit to store the nutrition of the recipes you just made</string>
 </dict>
 </plist>

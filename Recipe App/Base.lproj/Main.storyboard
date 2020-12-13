@@ -961,7 +961,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -1130,14 +1130,14 @@
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                 </variation>
                                             </label>
-                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yDA-Xc-BGV">
+                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="yDA-Xc-BGV">
                                                 <rect key="frame" x="12" y="904.5" width="390" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="HaW-15-JTl"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nutritionCell" id="dos-Ue-hIb" customClass="OverviewNutritionTableViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nutritionCell" rowHeight="50" id="dos-Ue-hIb" customClass="OverviewNutritionTableViewCell" customModule="Recipe_App" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="55.5" width="350" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dos-Ue-hIb" id="Urv-Kl-4zy">
@@ -1264,14 +1264,14 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xky-G4-M6W">
+                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xky-G4-M6W">
                                                 <rect key="frame" x="12" y="591" width="390" height="250"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="zFp-Ax-GdJ"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredientCell" id="Ykb-Qy-w8W" customClass="OverviewIngredientTableViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredientCell" rowHeight="50" id="Ykb-Qy-w8W" customClass="OverviewIngredientTableViewCell" customModule="Recipe_App" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="55.5" width="350" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ykb-Qy-w8W" id="gxi-Bx-btG">
@@ -1336,9 +1336,6 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <color key="textColor" red="0.30588235289999999" green="0.64705882349999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                                </variation>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-F6-BPp">
                                                 <rect key="frame" x="130" y="461" width="239" height="46.5"/>
@@ -2137,7 +2134,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=regular">
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -2229,14 +2226,14 @@
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                 </variation>
                                             </label>
-                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lZ7-TS-B45">
+                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lZ7-TS-B45">
                                                 <rect key="frame" x="12" y="387" width="390" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="Q9x-8L-Apv"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="equipmentCell" id="pUz-kh-Tj4" customClass="EquipmentTableViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="equipmentCell" rowHeight="50" id="pUz-kh-Tj4" customClass="EquipmentTableViewCell" customModule="Recipe_App" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="55.5" width="350" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pUz-kh-Tj4" id="pLh-SA-2zg">
@@ -2289,7 +2286,7 @@
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                 </variation>
                                             </label>
-                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="n9V-fm-D0x">
+                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="n9V-fm-D0x">
                                                 <rect key="frame" x="12" y="73.5" width="390" height="250"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -2617,14 +2614,14 @@
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                 </variation>
                                             </label>
-                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="gYk-y9-3uB">
+                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="gYk-y9-3uB">
                                                 <rect key="frame" x="12" y="475" width="390" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="D9W-LB-pGh"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="equipmentCell" id="urX-lw-24G" customClass="EquipmentTableViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="equipmentCell" rowHeight="50" id="urX-lw-24G" customClass="EquipmentTableViewCell" customModule="Recipe_App" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="55.5" width="350" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="urX-lw-24G" id="56t-jt-b2g">
@@ -2689,22 +2686,22 @@
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                                 </variation>
                                             </label>
-                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="s9Q-vT-6Tq">
+                                            <tableView clipsSubviews="YES" tag="10" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="s9Q-vT-6Tq">
                                                 <rect key="frame" x="12" y="161.5" width="390" height="250"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="ofm-gj-PWC"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredientCell" rowHeight="60" id="7JP-SL-bcR" customClass="IngredientTableViewCell" customModule="Recipe_App" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="55.5" width="350" height="60"/>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredientCell" rowHeight="50" id="7JP-SL-bcR" customClass="IngredientTableViewCell" customModule="Recipe_App" customModuleProvider="target">
+                                                        <rect key="frame" x="20" y="55.5" width="350" height="50"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7JP-SL-bcR" id="RZq-qn-JWD">
-                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="salt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xod-Fc-4my">
-                                                                    <rect key="frame" x="20" y="11" width="33.5" height="38"/>
+                                                                    <rect key="frame" x="20" y="11" width="33.5" height="28"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -2713,7 +2710,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpH-aZ-h3B">
-                                                                    <rect key="frame" x="290" y="10" width="40" height="40"/>
+                                                                    <rect key="frame" x="290" y="5" width="40" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="H7y-le-PZ7"/>
                                                                         <constraint firstAttribute="height" constant="40" id="qYw-Xe-K9A"/>
@@ -2726,11 +2723,11 @@
                                                             <constraints>
                                                                 <constraint firstItem="Xod-Fc-4my" firstAttribute="top" secondItem="RZq-qn-JWD" secondAttribute="topMargin" id="24q-SL-Cwv"/>
                                                                 <constraint firstAttribute="trailing" secondItem="DpH-aZ-h3B" secondAttribute="trailing" constant="20" id="2PN-lc-YIy"/>
-                                                                <constraint firstItem="DpH-aZ-h3B" firstAttribute="top" secondItem="RZq-qn-JWD" secondAttribute="top" constant="8.75" id="3VV-CJ-bXb"/>
+                                                                <constraint firstItem="DpH-aZ-h3B" firstAttribute="top" secondItem="RZq-qn-JWD" secondAttribute="top" constant="3.75" id="3VV-CJ-bXb"/>
                                                                 <constraint firstAttribute="bottomMargin" secondItem="Xod-Fc-4my" secondAttribute="bottom" id="Pue-Jx-kDq"/>
                                                                 <constraint firstItem="DpH-aZ-h3B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xod-Fc-4my" secondAttribute="trailing" constant="10" id="bMO-qS-LlO"/>
                                                                 <constraint firstItem="Xod-Fc-4my" firstAttribute="leading" secondItem="RZq-qn-JWD" secondAttribute="leadingMargin" id="cpf-ik-GB8"/>
-                                                                <constraint firstAttribute="bottom" secondItem="DpH-aZ-h3B" secondAttribute="bottom" constant="8.75" id="rZl-2h-h7c"/>
+                                                                <constraint firstAttribute="bottom" secondItem="DpH-aZ-h3B" secondAttribute="bottom" constant="3.75" id="rZl-2h-h7c"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>

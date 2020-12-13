@@ -145,8 +145,9 @@ class RecipeDetailsViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        ingredientsTableViewHeightConstraint.constant = ingredientsTableView.contentSize.height
-        nutritionTableViewHeightConstraint.constant = nutritionTableView.contentSize.height
+        if let recipes = recipes, let nutrition = recipes.nutrition, let ingredients = nutrition.ingredients {
+            ingredientsTableViewHeightConstraint.constant = CGFloat(50 * ingredients.count)
+        }
         stepsTableViewHeightConstraint.constant = stepsTableView.contentSize.height
     }
     

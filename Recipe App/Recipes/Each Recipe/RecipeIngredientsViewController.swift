@@ -90,10 +90,14 @@ class RecipeIngredientsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        ingredientsTableViewHeightConstraint.constant = ingredientsTableView.contentSize.height
-        equipmentTableViewHeightConstraint.constant = equipmentTableView.contentSize.height
+        if let recipes = recipes, let nutrition = recipes.nutrition, let ingredients = nutrition.ingredients {
+            ingredientsTableViewHeightConstraint.constant = CGFloat(60 * ingredients.count)
+        }
+        if let recipes = recipes {
+            let equipment = recipes.equipments
+            equipmentTableViewHeightConstraint.constant = CGFloat(50 * equipment.count)
+        }
     }
-
 }
 
 extension String {

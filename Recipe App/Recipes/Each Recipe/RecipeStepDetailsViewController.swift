@@ -110,9 +110,13 @@ class RecipeStepDetailsViewController: UIViewController, UNUserNotificationCente
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        ingredientsTableViewHeightConstraint.constant = ingredientsTableView.contentSize.height
-        equipmentTableViewHeightConstraint.constant = equipmentTableView.contentSize.height
+    override func viewWillAppear(_ animated: Bool) {
+        if let ingredients = ingredients {
+            ingredientsTableViewHeightConstraint.constant = CGFloat(50 * ingredients.count)
+        }
+        if let equipment = equipment {
+            equipmentTableViewHeightConstraint.constant = CGFloat(50 * equipment.count)
+        }
     }
     
     @IBAction func startButtonPressed(_ sender: Any) {

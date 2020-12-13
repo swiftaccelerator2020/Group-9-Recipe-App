@@ -61,9 +61,20 @@ class PreferencesViewController: UIViewController {
     }
 
     @IBAction func resetButtonPressed(_ sender: Any) {
-        defaults.set(true, forKey: "isNewUser")
-        defaults.set([], forKey: "diets")
-        defaults.set([], forKey: "intolerences")
+        let alert = UIAlertController(title: "Reset Preferences", message: "Are you sure you want to reset your diet and intolerence selection?", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { _ in
+            defaults.set([], forKey: "diets")
+            defaults.set([], forKey: "intolerences")
+            self.dietsTableView.reloadData()
+            self.intolerencesTableView.reloadData()
+        }
+        let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        alert.addAction(noAction)
+        alert.addAction(yesAction)
+        
+        present(alert, animated: true, completion: nil)
+        
+
     }
     /*
     // MARK: - Navigation

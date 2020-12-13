@@ -831,39 +831,28 @@
                                     <constraint firstAttribute="bottom" secondItem="anF-5X-WOn" secondAttribute="bottom" id="tCg-aS-jTB"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wga-FB-aYP">
-                                <rect key="frame" x="100" y="715.5" width="214" height="87.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" red="0.84313725490000002" green="0.14901960780000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
-                                </variation>
-                                <connections>
-                                    <action selector="resetButtonPressed:" destination="r9A-DD-Iuo" eventType="touchUpInside" id="9vy-oY-reN"/>
-                                    <segue destination="uCt-Tq-i7K" kind="presentation" modalPresentationStyle="fullScreen" id="z0q-1R-vJB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ocF-XE-Tcv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aBr-HZ-q3P" firstAttribute="top" secondItem="Rwk-wN-hwy" secondAttribute="bottom" constant="40" id="9ya-Gn-uac"/>
                             <constraint firstItem="aBr-HZ-q3P" firstAttribute="leading" secondItem="ocF-XE-Tcv" secondAttribute="leading" constant="40" id="IFW-bd-gTy"/>
-                            <constraint firstItem="Wga-FB-aYP" firstAttribute="top" secondItem="aBr-HZ-q3P" secondAttribute="bottom" constant="10" id="J2L-DN-eud"/>
-                            <constraint firstItem="Wga-FB-aYP" firstAttribute="leading" secondItem="ocF-XE-Tcv" secondAttribute="leading" constant="100" id="ODD-5R-AnL"/>
                             <constraint firstItem="aBr-HZ-q3P" firstAttribute="height" secondItem="zOe-sM-cEO" secondAttribute="height" multiplier="0.3" id="XQQ-ok-adO"/>
                             <constraint firstItem="Rwk-wN-hwy" firstAttribute="height" secondItem="zOe-sM-cEO" secondAttribute="height" multiplier="0.3" id="YGk-OF-uoc"/>
                             <constraint firstItem="Rwk-wN-hwy" firstAttribute="top" secondItem="ocF-XE-Tcv" secondAttribute="top" constant="40" id="c7K-Ym-4cj"/>
                             <constraint firstItem="ocF-XE-Tcv" firstAttribute="trailing" secondItem="Rwk-wN-hwy" secondAttribute="trailing" constant="40" id="d6f-rt-yxp"/>
-                            <constraint firstItem="ocF-XE-Tcv" firstAttribute="bottom" secondItem="Wga-FB-aYP" secondAttribute="bottom" constant="10" id="jIU-cy-fjJ"/>
                             <constraint firstItem="Rwk-wN-hwy" firstAttribute="leading" secondItem="ocF-XE-Tcv" secondAttribute="leading" constant="40" id="kuG-GQ-Ih5"/>
                             <constraint firstItem="ocF-XE-Tcv" firstAttribute="trailing" secondItem="aBr-HZ-q3P" secondAttribute="trailing" constant="40" id="xCW-nk-Cv6"/>
-                            <constraint firstItem="ocF-XE-Tcv" firstAttribute="trailing" secondItem="Wga-FB-aYP" secondAttribute="trailing" constant="100" id="zYx-JR-vEA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Preferences" id="zMH-ov-HLA"/>
+                    <navigationItem key="navigationItem" title="Preferences" id="zMH-ov-HLA">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="jF2-PH-cdK">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="resetButtonPressed:" destination="r9A-DD-Iuo" id="bQq-Ba-BB0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dietsTableView" destination="8n9-CZ-HqS" id="t5M-On-p8m"/>
                         <outlet property="dietsView" destination="6rI-Rh-mmI" id="bYw-3c-9lX"/>

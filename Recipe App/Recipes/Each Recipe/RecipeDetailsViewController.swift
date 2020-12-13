@@ -94,6 +94,13 @@ class RecipeDetailsViewController: UIViewController {
                 self.creditsLabel.text = "Recipe © \(URL(string: sourceURL)?.host ?? "www.spoonacular.com")"
             }
             if let healthScore = recipes.healthScore {
+                if healthScore > 70 {
+                    
+                } else if healthScore > 40 {
+                    healthScoreView.backgroundColor = .orange
+                } else {
+                    healthScoreView.backgroundColor = .red
+                }
                 let width = CGFloat(CGFloat(healthScore)/100)*(healthScoreViewBounds.bounds.width)
                 healthScoreWidthConstraint.constant = width
                 healthScoreLabel.text = "\(healthScore)"

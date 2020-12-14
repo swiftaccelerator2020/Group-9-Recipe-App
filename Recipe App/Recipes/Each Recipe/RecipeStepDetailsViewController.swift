@@ -148,7 +148,7 @@ class RecipeStepDetailsViewController: UIViewController, UNUserNotificationCente
     
     @IBAction func resetButtonPressed(_ sender: Any) {
         timer.invalidate()
-        seconds = timerLength!
+        seconds = timerLength! * 60
         theTimerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
         pauseButton.isEnabled = false

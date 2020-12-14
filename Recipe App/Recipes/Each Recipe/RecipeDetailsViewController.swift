@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class OverviewStepTableViewCell: UITableViewCell {
     
@@ -91,7 +92,11 @@ class RecipeDetailsViewController: UIViewController {
         
         if let recipes = recipes {
             if let sourceURL = recipes.sourceUrl {
-                self.creditsLabel.text = "Recipe © \(URL(string: sourceURL)?.host ?? "www.spoonacular.com")"
+                let creditsString = NSMutableAttributedString(string: "Recipe © \(URL(string: sourceURL)?.host ?? "www.spoonacular.com")".trimmingCharacters(in: .whitespacesAndNewlines))
+                creditsString.setColorForText(URL(string: sourceURL)?.host ?? "www.spoonacular.com", with: UIColor.link)
+                creditsString.setUnderlineWith(URL(string: sourceURL)?.host ?? "www.spoonacular.com", with: UIColor.link)
+                
+                self.creditsLabel.attributedText = creditsString
             }
             if let healthScore = recipes.healthScore {
                 if healthScore > 70 {
@@ -142,6 +147,10 @@ class RecipeDetailsViewController: UIViewController {
                 }
             }
         }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.onClickLabel(sender:)))
+        creditsLabel.isUserInteractionEnabled = true
+        creditsLabel.addGestureRecognizer(tap)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -149,6 +158,13 @@ class RecipeDetailsViewController: UIViewController {
             ingredientsTableViewHeightConstraint.constant = CGFloat(50 * ingredients.count)
         }
         stepsTableViewHeightConstraint.constant = stepsTableView.contentSize.height
+    }
+    
+    @objc func onClickLabel(sender:UITapGestureRecognizer) {
+        if let url = URL(string: recipes?.sourceUrl ?? "https://spoonacular.com") {
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        }
     }
     
     func formatLikesNumber(_ n: Int) -> String {
@@ -264,5 +280,33 @@ extension RecipeDetailsViewController: UITableViewDelegate, UITableViewDataSourc
             return OverviewStepTableViewCell()
         }
         return UITableViewCell()
+    }
+}
+
+extension NSMutableAttributedString {
+    func setColorForText(_ textToFind: String?, with color: UIColor) {
+        
+        let range:NSRange?
+        if let text = textToFind{
+            range = self.mutableString.range(of: text, options: .caseInsensitive)
+        }else{
+            range = NSMakeRange(0, self.length)
+        }
+        if range!.location != NSNotFound {
+            addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range!)
+        }
+    }
+    
+    func setUnderlineWith(_ textToFind:String?, with color: UIColor){
+        let range:NSRange?
+        if let text = textToFind{
+            range = self.mutableString.range(of: text, options: .caseInsensitive)
+        }else{
+            range = NSMakeRange(0, self.length)
+        }
+        if range!.location != NSNotFound {
+            addAttribute(NSAttributedString.Key.underlineStyle, value:NSUnderlineStyle.thick.rawValue, range: range!)
+            addAttribute(NSAttributedString.Key.underlineColor, value:color , range: range!)
+        }
     }
 }

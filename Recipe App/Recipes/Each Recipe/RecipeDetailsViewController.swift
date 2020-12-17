@@ -99,23 +99,15 @@ class RecipeDetailsViewController: UIViewController {
                 self.creditsLabel.attributedText = creditsString
             }
             if let healthScore = recipes.healthScore {
-                if healthScore > 70 {
-                    
-                } else if healthScore > 40 {
-                    healthScoreView.backgroundColor = .orange
-                } else {
-                    healthScoreView.backgroundColor = .red
-                }
-                let width = CGFloat(CGFloat(healthScore)/100)*(healthScoreViewBounds.bounds.width)
-                healthScoreWidthConstraint.constant = width
+                healthScoreWidthConstraint.constant = 0
                 healthScoreLabel.text = "\(healthScore)"
-                
             }
             if let title = recipes.title {
                 self.title = title.capitalized
             }
-            if let image = recipes.image {
-                self.recipeImageView.downloaded(from: image)
+            if let id = recipes.id {
+                self.recipeImageView.downloaded(from: "https://spoonacular.com/recipeImages/\(id)-636x393.jpg")
+                self.recipeImageView.alpha = 0
             }
             if let likes = recipes.aggregateLikes {
                 self.likesLabel.text = formatLikesNumber(likes)
@@ -158,6 +150,26 @@ class RecipeDetailsViewController: UIViewController {
             ingredientsTableViewHeightConstraint.constant = CGFloat(50 * ingredients.count)
         }
         stepsTableViewHeightConstraint.constant = stepsTableView.contentSize.height
+        
+        if let recipes = recipes {
+            if let healthScore = recipes.healthScore {
+                if healthScore > 70 {
+                    
+                } else if healthScore > 40 {
+                    healthScoreView.backgroundColor = .orange
+                } else {
+                    healthScoreView.backgroundColor = .red
+                }
+                let width = CGFloat(CGFloat(healthScore)/100)*(healthScoreViewBounds.bounds.width)
+                healthScoreWidthConstraint.constant = width
+                healthScoreLabel.text = "\(healthScore)"
+            }
+        }
+        
+        UIView.animate(withDuration: 0.75, delay: 0, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+            self.recipeImageView.alpha = 1
+        }, completion: nil)
     }
     
     @objc func onClickLabel(sender:UITapGestureRecognizer) {

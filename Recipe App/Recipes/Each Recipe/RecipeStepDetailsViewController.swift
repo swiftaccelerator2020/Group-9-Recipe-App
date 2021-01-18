@@ -151,6 +151,8 @@ class RecipeStepDetailsViewController: UIViewController, UNUserNotificationCente
         seconds = timerLength! * 60
         theTimerLabel.text = timeString(time: TimeInterval(seconds))
         isTimerRunning = false
+        pauseButton.setTitle("Pause", for: .normal)
+        resumeTapped = false
         pauseButton.isEnabled = false
         pauseButton.alpha = 0.7
         startButton.isEnabled = true

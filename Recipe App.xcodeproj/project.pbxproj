@@ -387,6 +387,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Recipe App/Recipe App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = XL5JK4F896;
 				INFOPLIST_FILE = "Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -409,6 +410,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Recipe App/Recipe App.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = XL5JK4F896;
 				INFOPLIST_FILE = "Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
